@@ -31,5 +31,21 @@ app.UseMyCustomMiddleware();
 // Conventional Middleware Class
 app.UseConventionalMiddleware();
 
+// UseWhen
+app.UseWhen(
+    context => context.Request.Query.ContainsKey("username"),
+    app =>
+    {
+        app.Use(async (context, next) =>
+        {
+         await context.Response.WriteAsync("hehe");
+         await next();
+        });
+    });
+
+app.Run(async context =>
+{
+    await context.Response.WriteAsync("uiui");
+});
 
 app.Run();
