@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/murilonicemento/Projects/asp-net-core-course/Middleware/MyFirstApp/MyFirstApp/MyFirstApp.csproj",
+      "projectUniqueName": "/home/murilonicemento/Projects/asp-net-core-course/Routing/MyFirstApp/MyFirstApp/MyFirstApp.csproj",
       "projectName": "MyFirstApp",
-      "projectPath": "/home/murilonicemento/Projects/asp-net-core-course/Middleware/MyFirstApp/MyFirstApp/MyFirstApp.csproj",
+      "projectPath": "/home/murilonicemento/Projects/asp-net-core-course/Routing/MyFirstApp/MyFirstApp/MyFirstApp.csproj",
       "packagesPath": "/home/murilonicemento/.nuget/packages/",
-      "outputPath": "/home/murilonicemento/Projects/asp-net-core-course/Middleware/MyFirstApp/MyFirstApp/obj/",
+      "outputPath": "/home/murilonicemento/Projects/asp-net-core-course/Routing/MyFirstApp/MyFirstApp/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/murilonicemento/.nuget/NuGet/NuGet.Config"
@@ -38,11 +38,6 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
       }
     },
     "frameworks": {
