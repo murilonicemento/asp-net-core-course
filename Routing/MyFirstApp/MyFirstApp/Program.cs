@@ -1,4 +1,11 @@
+using MyFirstApp.CustomConstraints;
+
 var builder = WebApplication.CreateBuilder(args);
+// adiciona a constraint personalizada
+builder.Services.AddRouting(options =>
+{
+    options.ConstraintMap.Add("name", typeof(CustomContraint));
+});
 var app = builder.Build();
 
 // app.Use(async (context, next) =>
@@ -140,6 +147,13 @@ app.UseEndpoints(endpoints =>
     
     // regex match (só aceita palavras john, maria e ronaldo)
     endpoints.Map("/employee/profile/{employeename:regex(^(john|maria|ronaldo)$)}", async (context) =>
+    {
+        string? employee = context.Request?.RouteValues["employeename"]?.ToString();
+        await context.Response.WriteAsync($"Employee name is {employee}");
+    });
+    
+    // classe customizada constraint usando regex
+    endpoints.Map("/employee/profile/{employeename:name}", async (context) =>
     {
         string? employee = context.Request?.RouteValues["employeename"]?.ToString();
         await context.Response.WriteAsync($"Employee name is {employee}");
