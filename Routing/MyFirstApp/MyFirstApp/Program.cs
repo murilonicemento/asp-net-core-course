@@ -158,6 +158,12 @@ app.UseEndpoints(endpoints =>
         string? employee = context.Request?.RouteValues["employeename"]?.ToString();
         await context.Response.WriteAsync($"Employee name is {employee}");
     });
+    
+    // ordem de seleção dos endpoints
+    endpoints.Map("sales-report/2024/jan", async (context) =>
+    {
+        await context.Response.WriteAsync("sales report exclusively for 2024 - jan");
+    });
 });
 
 app.Run(async (context) =>

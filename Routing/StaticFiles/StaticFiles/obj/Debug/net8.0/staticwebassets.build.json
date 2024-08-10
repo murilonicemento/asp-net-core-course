@@ -1,0 +1,77 @@
+{
+  "Version": 1,
+  "Hash": "4nwgqTasYkZoCUextsb5K/okaoklPU/OOFos6E0Wo2k=",
+  "Source": "StaticFiles",
+  "BasePath": "_content/StaticFiles",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "StaticFiles/wwwroot",
+      "Source": "StaticFiles",
+      "ContentRoot": "/home/murilonicemento/Projects/asp-net-core-course/Routing/StaticFiles/StaticFiles/wwwroot/",
+      "BasePath": "_content/StaticFiles",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "/home/murilonicemento/Projects/asp-net-core-course/Routing/StaticFiles/StaticFiles/wwwroot/docs.pdf",
+      "SourceId": "StaticFiles",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/murilonicemento/Projects/asp-net-core-course/Routing/StaticFiles/StaticFiles/wwwroot/",
+      "BasePath": "_content/StaticFiles",
+      "RelativePath": "docs.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/docs.pdf"
+    },
+    {
+      "Identity": "/home/murilonicemento/Projects/asp-net-core-course/Routing/StaticFiles/StaticFiles/wwwroot/img1.jpg",
+      "SourceId": "StaticFiles",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/murilonicemento/Projects/asp-net-core-course/Routing/StaticFiles/StaticFiles/wwwroot/",
+      "BasePath": "_content/StaticFiles",
+      "RelativePath": "img1.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/img1.jpg"
+    },
+    {
+      "Identity": "/home/murilonicemento/Projects/asp-net-core-course/Routing/StaticFiles/StaticFiles/wwwroot/Sample.txt",
+      "SourceId": "StaticFiles",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/murilonicemento/Projects/asp-net-core-course/Routing/StaticFiles/StaticFiles/wwwroot/",
+      "BasePath": "_content/StaticFiles",
+      "RelativePath": "Sample.txt",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/Sample.txt"
+    }
+  ]
+}

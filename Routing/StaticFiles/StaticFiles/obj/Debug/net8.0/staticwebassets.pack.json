@@ -1,0 +1,33 @@
+{
+  "Files": [
+    {
+      "Id": "/home/murilonicemento/Projects/asp-net-core-course/Routing/StaticFiles/StaticFiles/wwwroot/Sample.txt",
+      "PackagePath": "staticwebassets/Sample.txt"
+    },
+    {
+      "Id": "/home/murilonicemento/Projects/asp-net-core-course/Routing/StaticFiles/StaticFiles/wwwroot/docs.pdf",
+      "PackagePath": "staticwebassets/docs.pdf"
+    },
+    {
+      "Id": "/home/murilonicemento/Projects/asp-net-core-course/Routing/StaticFiles/StaticFiles/wwwroot/img1.jpg",
+      "PackagePath": "staticwebassets/img1.jpg"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.StaticFiles.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.build.StaticFiles.props",
+      "PackagePath": "build\\StaticFiles.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.StaticFiles.props",
+      "PackagePath": "buildMultiTargeting\\StaticFiles.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.StaticFiles.props",
+      "PackagePath": "buildTransitive\\StaticFiles.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
