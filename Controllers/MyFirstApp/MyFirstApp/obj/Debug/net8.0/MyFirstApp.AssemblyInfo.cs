@@ -10,12 +10,12 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("StaticFiles")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("MyFirstApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dbe74a30a623a626cb2fcb8c5e20ae7ad9b2ed40")]
-[assembly: System.Reflection.AssemblyProductAttribute("StaticFiles")]
-[assembly: System.Reflection.AssemblyTitleAttribute("StaticFiles")]
+[assembly: System.Reflection.AssemblyProductAttribute("MyFirstApp")]
+[assembly: System.Reflection.AssemblyTitleAttribute("MyFirstApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 
 // Gerado pela classe WriteCodeFragment do MSBuild.
