@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using MyFirstApp.Models;
 
 namespace MyFirstApp.Controllers;
 
@@ -16,6 +17,14 @@ public class HomeController : Controller
         // };
 
         return Content("<h1>Welcome</h1><p>Hello from index</p>", "text/html");
+    }
+    
+    [Route("person")]
+    public JsonResult Person()
+    {
+        Person person = new Person() { Id = Guid.NewGuid(), FirstName = "Ronaldo", LastName = "Silva", Age = 123 };
+        // return new JsonResult(person);
+        return Json(person);
     }
     
     [Route("about")]
