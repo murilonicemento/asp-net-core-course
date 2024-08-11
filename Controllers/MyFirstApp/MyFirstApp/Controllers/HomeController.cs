@@ -27,10 +27,26 @@ public class HomeController : Controller
         return Json(person);
     }
     
-    [Route("about")]
-    public string About()
+    [Route("file-download")]
+    public VirtualFileResult FileDownload()
     {
-        return "About";
+        // return new VirtualFileResult("/Sample.txt", "text/plain");
+        return File("/Sample.txt", "text/plain");
+    }
+    
+    [Route("file-download2")]
+    public PhysicalFileResult FileDownload2()
+    {
+        // return new PhysicalFileResult(@"~/aspnetcore/controllers/MyFirstApp/wwwroot/Sample.txt", "text/plain");
+        return PhysicalFile(@"~/aspnetcore/controllers/MyFirstApp/wwwroot/Sample.txt", "text/plain");
+    }
+    
+    [Route("file-download3")]
+    public FileContentResult FileDownload3()
+    {
+        byte[] bytes = System.IO.File.ReadAllBytes(@"~/aspnetcore/controllers/MyFirstApp/wwwroot/Sample.txt");
+        // return new FileContentResult(bytes, "text/plain");
+        return File(bytes, "text/plain");
     }
     
     [Route("contact-us/{mobile:regex(^\\d{{10}}$)}")]
