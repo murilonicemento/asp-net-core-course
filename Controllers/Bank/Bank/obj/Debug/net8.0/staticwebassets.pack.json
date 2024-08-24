@@ -1,0 +1,25 @@
+{
+  "Files": [
+    {
+      "Id": "/home/murilonicemento/Projects/asp-net-core-course/Controllers/Bank/Bank/wwwroot/some.pdf",
+      "PackagePath": "staticwebassets/some.pdf"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.Bank.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.build.Bank.props",
+      "PackagePath": "build\\Bank.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.Bank.props",
+      "PackagePath": "buildMultiTargeting\\Bank.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.Bank.props",
+      "PackagePath": "buildTransitive\\Bank.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

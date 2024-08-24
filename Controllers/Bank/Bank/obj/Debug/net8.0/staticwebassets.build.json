@@ -1,0 +1,39 @@
+{
+  "Version": 1,
+  "Hash": "yBgZTCObX625LRvp0nR6e4sfFmlTsjGVMquOxEvhfj8=",
+  "Source": "Bank",
+  "BasePath": "_content/Bank",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "Bank/wwwroot",
+      "Source": "Bank",
+      "ContentRoot": "/home/murilonicemento/Projects/asp-net-core-course/Controllers/Bank/Bank/wwwroot/",
+      "BasePath": "_content/Bank",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "/home/murilonicemento/Projects/asp-net-core-course/Controllers/Bank/Bank/wwwroot/some.pdf",
+      "SourceId": "Bank",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/murilonicemento/Projects/asp-net-core-course/Controllers/Bank/Bank/wwwroot/",
+      "BasePath": "_content/Bank",
+      "RelativePath": "some.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/some.pdf"
+    }
+  ]
+}
