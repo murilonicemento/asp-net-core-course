@@ -37,7 +37,7 @@ public class HomeController : Controller
             return BadRequest("Book id can not be greater than 100.");
         }
 
-        if (Convert.ToBoolean(Request.Query["isloggedin"] == true))
+        if (Convert.ToBoolean(Request.Query["isloggedin"] == false))
         {
             // Response.StatusCode = 401;
             // return Content("User must be logged in.");
