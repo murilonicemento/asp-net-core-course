@@ -1,13 +1,19 @@
 using Microsoft.AspNetCore.Mvc;
+using ModelBinding_And_Validations.Models;
 
 namespace ModelBinding_And_Validations.Controllers;
 
 public class HomeController : Controller
 {
   [Route("bookstore/{bookid?}/{isLoggedin?}")]
-  public Microsoft.AspNetCore.Mvc.IActionResult Index(int? bookid, bool? isLoggedin)
+  // public IActionResult Index(int? bookid, bool? isLoggedin) => Utiliza ordem de prioridade para definir o tipo de parâmetro (Route data, Query string)
+  // public IActionResult Index([FromRoute] int? bookid, [FromRoute] bool? isLoggedin) => Aceita dados do tipo route data
+  // public IActionResult Index([FromQuery] int? bookid, [FromQuery] bool? isLoggedin) => Aceita dados do tipo query string
+  // public IActionResult Index([FromQuery] int? bookid, [FromQuery] bool? isLoggedin, Book book) => Model Biding
+  // public IActionResult Index([FromRoute] int? bookid, [FromRoute] bool? isLoggedin, [FromRoute] Book book) => Model Biding FromRoute
+  public IActionResult Index([FromQuery] int? bookid, [FromQuery] bool? isLoggedin, [FromQuery] Book book) // Model Biding FromQuery
   {
-    // url => bookstore?bookid=10&isLoggedin=true
+    // url => bookstore?bookid=10&isLoggedin=true&author=Ronaldo
 
     if (bookid.HasValue == false)
     {
@@ -29,6 +35,6 @@ public class HomeController : Controller
       return Unauthorized("User must be logged in.");
     }
 
-    return Content($"Book id: {bookid}", "text/plain");
+    return Content($"Book id: {bookid}, Book {book}", "text/plain");
   }
 }
