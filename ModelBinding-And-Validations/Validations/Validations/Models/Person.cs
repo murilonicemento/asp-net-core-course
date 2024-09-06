@@ -42,6 +42,8 @@ public class Person : IValidatableObject
 
   public int? Age { get; set; }
 
+  public List<string?> Tags { get; set; } = new List<string?>();
+
   public override string ToString()
   {
     return $"Person object - Person name: {PersonName}, Person email: {Email}, Person phone: {Phone}, Person password: {Password}, Person confirm password: {ConfirmPassword}, Person price: {Price}";
