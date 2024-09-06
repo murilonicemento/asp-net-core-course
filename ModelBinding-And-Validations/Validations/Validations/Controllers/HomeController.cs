@@ -10,7 +10,7 @@ public class HomeController : Controller
   // [Bind(nameof(Person.PersonName), nameof(Person.Email), nameof(Person.Password), nameof(Person.ConfirmPassword))]
   // [FromBody]
   // [ModelBinder(BinderType = typeof(PersonModelBinder))] 
-  public IActionResult Index(Person person)
+  public IActionResult Index(Person person, [FromHeader(Name = "User-Agent")] string UserAgent)
   {
     if (!ModelState.IsValid)
     {
@@ -28,6 +28,6 @@ public class HomeController : Controller
       return BadRequest(string.Join("\n", errors));
     }
 
-    return Content($"{person}");
+    return Content($"{person}, {UserAgent}");
   }
 }
