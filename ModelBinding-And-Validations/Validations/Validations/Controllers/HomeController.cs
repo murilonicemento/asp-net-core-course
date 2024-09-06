@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using Validations.Controllers.CustomModelsBinders;
 using Validations.Models;
 
 namespace Validations.Controllers;
@@ -7,7 +8,9 @@ public class HomeController : Controller
 {
   [Route("register")]
   // [Bind(nameof(Person.PersonName), nameof(Person.Email), nameof(Person.Password), nameof(Person.ConfirmPassword))]
-  public IActionResult Index([FromBody] Person person)
+  // [FromBody]
+  // [ModelBinder(BinderType = typeof(PersonModelBinder))] 
+  public IActionResult Index(Person person)
   {
     if (!ModelState.IsValid)
     {
