@@ -7,22 +7,24 @@ namespace ordersApp.CustomValidations;
 public class InvoicePriceValidatorAttribute(string products) : ValidationAttribute
 {
     private new string Products { get; set; } = products;
+
     protected override ValidationResult? IsValid(object? value, ValidationContext validationContext)
     {
         if (value == null) return null;
 
-        double invoicePrice = (double)value;
-        PropertyInfo? property = validationContext.ObjectType.GetProperty(Products);
+        double invoicePrice = Convert.ToDouble(value);
 
-        if (property != null)
+        PropertyInfo? propertyInfo = validationContext.ObjectType.GetProperty(Products);
+
+        if (propertyInfo != null)
         {
-            if (property.GetValue(validationContext.ObjectInstance) is IEnumerable<Product> list)
+            if (propertyInfo.GetValue(validationContext.ObjectInstance) is IEnumerable<Product> listProduct)
             {
-                double cost = list.Sum(product => product.Price * product.Quantity);
+                double cost = listProduct.Sum(product => product.Price * product.Quantity);
 
                 if (cost != invoicePrice)
                 {
-                    return new ValidationResult("InvoicePrice deve ser igual a soma total dos produtos");
+                    return new ValidationResult("InvoicePrice não deve ser diferente da soma dos produtos.");
                 }
             }
         }
@@ -30,3 +32,4 @@ public class InvoicePriceValidatorAttribute(string products) : ValidationAttribu
         return null;
     }
 }
+

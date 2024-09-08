@@ -1,7 +1,7 @@
 using System.ComponentModel.DataAnnotations;
 using ordersApp.Models;
 
-namespace  ordersApp.CustomValidations;
+namespace ordersApp.CustomValidations;
 
 public class MinimalProductValidatorAttribute : ValidationAttribute
 {
