@@ -1,0 +1,6 @@
+/home/murilonicemento/Projects/asp-net-core-course/ModelBinding-And-Validations/OrdersApp/ordersApp/obj/Debug/net8.0/ordersApp.GeneratedMSBuildEditorConfig.editorconfig
+/home/murilonicemento/Projects/asp-net-core-course/ModelBinding-And-Validations/OrdersApp/ordersApp/obj/Debug/net8.0/ordersApp.AssemblyInfoInputs.cache
+/home/murilonicemento/Projects/asp-net-core-course/ModelBinding-And-Validations/OrdersApp/ordersApp/obj/Debug/net8.0/ordersApp.AssemblyInfo.cs
+/home/murilonicemento/Projects/asp-net-core-course/ModelBinding-And-Validations/OrdersApp/ordersApp/obj/Debug/net8.0/ordersApp.csproj.CoreCompileInputs.cache
+/home/murilonicemento/Projects/asp-net-core-course/ModelBinding-And-Validations/OrdersApp/ordersApp/obj/Debug/net8.0/ordersApp.MvcApplicationPartsAssemblyInfo.cache
+/home/murilonicemento/Projects/asp-net-core-course/ModelBinding-And-Validations/OrdersApp/ordersApp/obj/Debug/net8.0/ordersApp.sourcelink.json
