@@ -1,0 +1,19 @@
+{
+  "Version": 1,
+  "Hash": "+oHvuJ3oUlwC3tC/lortDTuPVsoA5dFxgpF769iBgwU=",
+  "Source": "ViewsExample",
+  "BasePath": "_content/ViewsExample",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "ViewsExample/wwwroot",
+      "Source": "ViewsExample",
+      "ContentRoot": "/home/murilonicemento/Projects/asp-net-core-course/RazorViews/ViewsExample/ViewsExample/wwwroot/",
+      "BasePath": "_content/ViewsExample",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": []
+}
