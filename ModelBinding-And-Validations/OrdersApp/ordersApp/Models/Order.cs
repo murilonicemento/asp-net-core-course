@@ -7,7 +7,7 @@ namespace ordersApp.Models;
 public class Order : IValidatableObject
 {
   [Required(ErrorMessage = "{0} can't be blank")]
-  public int? OrderNo { get; set; }
+  public int? OrderNumber { get; set; }
   [Required(ErrorMessage = "{0} can't be blank")]
   public DateTime OrderDate { get; set; }
   [Required(ErrorMessage = "{0} can't be blank")]
@@ -22,7 +22,7 @@ public class Order : IValidatableObject
   {
     if (OrderDate < DateTime.Now)
     {
-      yield return new ValidationResult("OrderDate deve ser maior que a data atual", new[] {nameof(OrderDate)});
+      yield return new ValidationResult("OrderDate deve ser maior que a data atual", new[] { nameof(OrderDate) });
     }
   }
 }

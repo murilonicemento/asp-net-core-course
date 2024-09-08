@@ -24,12 +24,12 @@ public class InvoicePriceValidatorAttribute(string products) : ValidationAttribu
 
                 if (cost != invoicePrice)
                 {
-                    return new ValidationResult("InvoicePrice não deve ser diferente da soma dos produtos.");
+                    return new ValidationResult("InvoicePrice não deve ser diferente da soma dos produtos.", new string[] { nameof(validationContext.MemberName) });
                 }
             }
         }
 
-        return null;
+        return ValidationResult.Success;
     }
 }
 
