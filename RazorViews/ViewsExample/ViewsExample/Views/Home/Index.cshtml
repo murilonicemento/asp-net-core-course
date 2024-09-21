@@ -1,7 +1,7 @@
 @using ViewsExample.Models;
 @{
     string appTitle = "Aps.Net Core Demo App";
-    Person person = new Person() { Name = "John", DateOfBirth = null };
+    Person person = new Person() { Name = "John", DateOfBirth = null, PersonGender = Person.Gender.Male};
 }
 <!DOCTYPE html>
 
@@ -22,6 +22,32 @@
 else
 {
     <h3>Date of birth is unknown</h3>
+}
+
+@switch (person.PersonGender)
+{
+    case Person.Gender.Male:
+        <p>November 19 is International Men's day</p>
+        ;
+        break;
+    case Person.Gender.Female:
+        <p>March 8 is International Women's day</p>
+        ;
+        break;
+    case Person.Gender.Other:
+        <p>March 31 is International Transgender's day</p>
+        ;
+        break;
+}
+
+@for (var i = 0; i < 5; i++)
+{
+    <p>@i</p>
+}
+
+@foreach (var x in new int[] { 1, 2, 3, 4, 5, 6 })
+{
+    <p>@x - hehe</p>
 }
 
 </body>
