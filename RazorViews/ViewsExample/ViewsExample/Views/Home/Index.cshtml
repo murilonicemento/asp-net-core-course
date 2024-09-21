@@ -1,7 +1,28 @@
 @using ViewsExample.Models;
 @{
     string appTitle = "Aps.Net Core Demo App";
-    Person person = new Person() { Name = "John", DateOfBirth = null, PersonGender = Person.Gender.Male};
+    Person person = new Person() { Name = "John", DateOfBirth = null, PersonGender = Person.Gender.Male };
+    List<Person> people = new List<Person>()
+    {
+        new Person()
+        {
+            Name = "Dêcio",
+            DateOfBirth = DateTime.Now,
+            PersonGender = Person.Gender.Male
+        },
+        new Person()
+        {
+            Name = "Ronaldo",
+            DateOfBirth = DateTime.Now,
+            PersonGender = Person.Gender.Other
+        },
+        new Person()
+        {
+            Name = "Maria",
+            DateOfBirth = DateTime.Now,
+            PersonGender = Person.Gender.Female
+        }
+    };
 }
 <!DOCTYPE html>
 
@@ -45,9 +66,22 @@ else
     <p>@i</p>
 }
 
-@foreach (var x in new int[] { 1, 2, 3, 4, 5, 6 })
+<h2>Welcome</h2>
+
+@foreach (Person p in people)
 {
-    <p>@x - hehe</p>
+    <div>
+        <p>@p.Name</p>
+        @if (person.DateOfBirth is not null)
+        {
+            <p>p.DateOfBirth</p>
+        }
+        else
+        {
+            <p>Date unknown</p>
+        }
+        <p>@p.PersonGender</p>
+    </div>
 }
 
 </body>
