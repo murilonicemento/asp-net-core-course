@@ -70,6 +70,9 @@ else
 
 @foreach (Person p in people)
 {
+    @*Literal (text and @:)*@
+    <text>Hello</text>
+    @: MEOW
     <div>
         <p>@p.Name</p>
         @if (person.DateOfBirth is not null)
