@@ -15,4 +15,8 @@
       <Compile Remove="Views\Home\Details.cshtml.cs" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="Views\Products\" />
+    </ItemGroup>
+
 </Project>
