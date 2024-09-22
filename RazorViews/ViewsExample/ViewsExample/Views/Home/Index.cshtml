@@ -1,91 +1,107 @@
 @using ViewsExample.Models;
 @{
-    string appTitle = "Aps.Net Core Demo App";
-    Person person = new Person() { Name = "John", DateOfBirth = null, PersonGender = Person.Gender.Male };
-    List<Person> people = new List<Person>()
-    {
-        new Person()
-        {
-            Name = "Dêcio",
-            DateOfBirth = DateTime.Now,
-            PersonGender = Person.Gender.Male
-        },
-        new Person()
-        {
-            Name = "Ronaldo",
-            DateOfBirth = DateTime.Now,
-            PersonGender = Person.Gender.Other
-        },
-        new Person()
-        {
-            Name = "Maria",
-            DateOfBirth = DateTime.Now,
-            PersonGender = Person.Gender.Female
-        }
-    };
+
 }
+
+@{
+    // local functions
+    double? GetAge(DateTime? dateOfBirth)
+    {
+        if (dateOfBirth is not null)
+        {
+            return System.Math.Round((DateTime.Now - dateOfBirth.Value).TotalDays / 365.25);
+        }
+
+        return null;
+    }
+}
+
+@functions{
+
+    // method
+    double? GetAge(DateTime? dateOfBirth)
+    {
+        if (dateOfBirth is not null)
+        {
+            return System.Math.Round((DateTime.Now - dateOfBirth.Value).TotalDays / 365.25);
+        }
+
+        return null;
+    }
+
+    int x = 10;
+
+    string Name { get; set; } = "Careca";
+    string _alertMessage = @"<script>alert('{people.Count} people found')</script>";
+}
+
 <!DOCTYPE html>
 
 <html lang="pt-br">
 <head>
-    <title>@appTitle</title>
+    <title>@ViewData["appTitle"]</title>
     <meta charset="UTF-8"/>
 </head>
 <body>
-<h1>Welcome</h1>
-<h2>Hello @person.Name</h2>
-
-@if (person.DateOfBirth.HasValue)
-{
-    double age = Math.Round((DateTime.Now - person.DateOfBirth).Value.TotalDays / 365.25);
-    <h3>@age years old</h3>
+@Html.Raw(_alertMessage)
+<h1>Welcome @Name</h1>
+@{
+    List<Person>? person = (List<Person>?)ViewData["people"];
 }
-else
-{
-    <h3>Date of birth is unknown</h3>
-}
+<h2>Hello</h2>
 
-@switch (person.PersonGender)
-{
-    case Person.Gender.Male:
-        <p>November 19 is International Men's day</p>
-        ;
-        break;
-    case Person.Gender.Female:
-        <p>March 8 is International Women's day</p>
-        ;
-        break;
-    case Person.Gender.Other:
-        <p>March 31 is International Transgender's day</p>
-        ;
-        break;
-}
-
-@for (var i = 0; i < 5; i++)
-{
-    <p>@i</p>
-}
-
-<h2>Welcome</h2>
-
-@foreach (Person p in people)
-{
-    @*Literal (text and @:)*@
-    <text>Hello</text>
-    @: MEOW
-    <div>
-        <p>@p.Name</p>
-        @if (person.DateOfBirth is not null)
-        {
-            <p>p.DateOfBirth</p>
-        }
-        else
-        {
-            <p>Date unknown</p>
-        }
-        <p>@p.PersonGender</p>
-    </div>
-}
+@* @if (person.DateOfBirth.HasValue) *@
+@* { *@
+@*     double age = Math.Round((DateTime.Now - person.DateOfBirth).Value.TotalDays / 365.25); *@
+@*     <h3>@age years old</h3> *@
+@* } *@
+@* else *@
+@* { *@
+@*     <h3>Date of birth is unknown</h3> *@
+@* } *@
+@* *@
+@* @switch (person.PersonGender) *@
+@* { *@
+@*     case Person.Gender.Male: *@
+@*         <p>November 19 is International Men's day</p> *@
+@*         ; *@
+@*         break; *@
+@*     case Person.Gender.Female: *@
+@*         <p>March 8 is International Women's day</p> *@
+@*         ; *@
+@*         break; *@
+@*     case Person.Gender.Other: *@
+@*         <p>March 31 is International Transgender's day</p> *@
+@*         ; *@
+@*         break; *@
+@* } *@
+@* *@
+@* @for (var i = 0; i < 5; i++) *@
+@* { *@
+@*     <p>@i</p> *@
+@* } *@
+@* *@
+@* <h2>Welcome</h2> *@
+@* *@
+@* @foreach (Person p in people) *@
+@* { *@
+@*     $1$Literal (text and @:)#1# *@
+@*     <text>Hello</text> *@
+@*     @: MEOW *@
+@*     <div> *@
+@*         <p>@p.Name</p> *@
+@*         @if (p.DateOfBirth is not null) *@
+@*         { *@
+@*             <p>@p.DateOfBirth.Value.ToString("dd/MM/yyyy")</p> *@
+@*             <p>@GetAge(p.DateOfBirth) years old</p> *@
+@*         } *@
+@*         else *@
+@*         { *@
+@*             <p>Date unknown</p> *@
+@*         } *@
+@*         <p>@p.PersonGender</p> *@
+@*     </div> *@
+@* } *@
 
 </body>
 </html>

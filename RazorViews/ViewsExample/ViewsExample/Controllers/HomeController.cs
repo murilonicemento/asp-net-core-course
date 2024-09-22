@@ -1,5 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
-
+using ViewsExample.Models;
 namespace ViewsExample.Controllers;
 
 public class HomeController : Controller
@@ -8,6 +8,30 @@ public class HomeController : Controller
     [Route("/")]
     public IActionResult Index()
     {
+        ViewData["appTitle"] = "Aps.Net Core Demo App";
+        Person person = new Person() { Name = "John", DateOfBirth = null, PersonGender = Person.Gender.Male };
+        List<Person> people = new List<Person>()
+        {
+            new Person()
+            {
+                Name = "Dêcio",
+                DateOfBirth = DateTime.Now,
+                PersonGender = Person.Gender.Male
+            },
+            new Person()
+            {
+                Name = "Ronaldo",
+                DateOfBirth = DateTime.Now,
+                PersonGender = Person.Gender.Other
+            },
+            new Person()
+            {
+                Name = "Maria",
+                DateOfBirth = DateTime.Now,
+                PersonGender = Person.Gender.Female
+            }
+        };
+        ViewData["people"] = people;
         return View(); // Index.cshtml
         // return View("abc"); // abc.cshtml
         // return new ViewResult() { ViewName = "abc" };
