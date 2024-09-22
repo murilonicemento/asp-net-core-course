@@ -1,107 +1,39 @@
-@using ViewsExample.Models;
-@{
-
-}
-
-@{
-    // local functions
-    double? GetAge(DateTime? dateOfBirth)
-    {
-        if (dateOfBirth is not null)
-        {
-            return System.Math.Round((DateTime.Now - dateOfBirth.Value).TotalDays / 365.25);
-        }
-
-        return null;
-    }
-}
-
-@functions{
-
-    // method
-    double? GetAge(DateTime? dateOfBirth)
-    {
-        if (dateOfBirth is not null)
-        {
-            return System.Math.Round((DateTime.Now - dateOfBirth.Value).TotalDays / 365.25);
-        }
-
-        return null;
-    }
-
-    int x = 10;
-
-    string Name { get; set; } = "Careca";
-    string _alertMessage = @"<script>alert('{people.Count} people found')</script>";
-}
+@using ViewsExample.Models
 
 <!DOCTYPE html>
-
 <html lang="pt-br">
 <head>
-    <title>@ViewData["appTitle"]</title>
-    <meta charset="UTF-8"/>
+    <title>@ViewBag.appTitle</title>
+    <meta charset="utf-8" />
+    <link href="~/StyleSheet.css" rel="stylesheet" />
 </head>
 <body>
-@Html.Raw(_alertMessage)
-<h1>Welcome @Name</h1>
-@{
-    List<Person>? person = (List<Person>?)ViewData["people"];
-}
-<h2>Hello</h2>
+<div class="page-content">
+    <h1>Welcome</h1>
+    @{
+        // List<Person>? people = (List<Person>?)ViewData["people"];
+    }
 
-@* @if (person.DateOfBirth.HasValue) *@
-@* { *@
-@*     double age = Math.Round((DateTime.Now - person.DateOfBirth).Value.TotalDays / 365.25); *@
-@*     <h3>@age years old</h3> *@
-@* } *@
-@* else *@
-@* { *@
-@*     <h3>Date of birth is unknown</h3> *@
-@* } *@
-@* *@
-@* @switch (person.PersonGender) *@
-@* { *@
-@*     case Person.Gender.Male: *@
-@*         <p>November 19 is International Men's day</p> *@
-@*         ; *@
-@*         break; *@
-@*     case Person.Gender.Female: *@
-@*         <p>March 8 is International Women's day</p> *@
-@*         ; *@
-@*         break; *@
-@*     case Person.Gender.Other: *@
-@*         <p>March 31 is International Transgender's day</p> *@
-@*         ; *@
-@*         break; *@
-@* } *@
-@* *@
-@* @for (var i = 0; i < 5; i++) *@
-@* { *@
-@*     <p>@i</p> *@
-@* } *@
-@* *@
-@* <h2>Welcome</h2> *@
-@* *@
-@* @foreach (Person p in people) *@
-@* { *@
-@*     $1$Literal (text and @:)#1# *@
-@*     <text>Hello</text> *@
-@*     @: MEOW *@
-@*     <div> *@
-@*         <p>@p.Name</p> *@
-@*         @if (p.DateOfBirth is not null) *@
-@*         { *@
-@*             <p>@p.DateOfBirth.Value.ToString("dd/MM/yyyy")</p> *@
-@*             <p>@GetAge(p.DateOfBirth) years old</p> *@
-@*         } *@
-@*         else *@
-@*         { *@
-@*             <p>Date unknown</p> *@
-@*         } *@
-@*         <p>@p.PersonGender</p> *@
-@*     </div> *@
-@* } *@
+    @foreach (Person person in ViewBag.people)
+    {
+        <div class="box float-left w-50">
+            <h3>@person.Name</h3>
+            <table class="table w-100">
+                <tbody>
+                <tr>
+                    <td>Gender</td>
+                    <td>@person.PersonGender</td>
+                </tr>
+                <tr>
+                    <td>Date of Birth</td>
+                    <td>@person.DateOfBirth?.ToString("MM/dd/yyyy")</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    }
+</div>
+
 
 </body>
 </html>

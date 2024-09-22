@@ -9,7 +9,6 @@ public class HomeController : Controller
     public IActionResult Index()
     {
         ViewData["appTitle"] = "Aps.Net Core Demo App";
-        Person person = new Person() { Name = "John", DateOfBirth = null, PersonGender = Person.Gender.Male };
         List<Person> people = new List<Person>()
         {
             new Person()
@@ -31,7 +30,8 @@ public class HomeController : Controller
                 PersonGender = Person.Gender.Female
             }
         };
-        ViewData["people"] = people;
+        // ViewData["people"] = people;
+        ViewBag.people = people;
         return View(); // Index.cshtml
         // return View("abc"); // abc.cshtml
         // return new ViewResult() { ViewName = "abc" };
