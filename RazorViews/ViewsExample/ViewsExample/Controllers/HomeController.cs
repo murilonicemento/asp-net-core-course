@@ -70,4 +70,28 @@ public class HomeController : Controller
 
         return View(matchingPerson);
     }
+
+    [Route("person-with-product")]
+    public IActionResult PersonWithProduct()
+    {
+        Person person = new Person()
+        {
+            Name = "Ronaldo",
+            DateOfBirth = DateTime.Now,
+            PersonGender = Person.Gender.Other
+        };
+        Product product = new Product()
+        {
+            ProductId = 1,
+            ProductName = "Banana"
+        };
+
+        PersonWithProductWrapperModel personWithProductWrapperModel = new PersonWithProductWrapperModel()
+        {
+            PersonData = person,
+            ProductData = product
+        };
+        
+        return View(personWithProductWrapperModel);
+    }
 }
