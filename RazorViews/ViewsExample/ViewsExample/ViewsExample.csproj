@@ -12,6 +12,7 @@
 
     <ItemGroup>
       <Compile Remove="Views\Home\page.cshtml.cs" />
+      <Compile Remove="Views\Home\Details.cshtml.cs" />
     </ItemGroup>
 
 </Project>
