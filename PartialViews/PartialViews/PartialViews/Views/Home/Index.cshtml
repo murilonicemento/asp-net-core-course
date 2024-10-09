@@ -2,8 +2,24 @@
 
 @await Html.PartialAsync("_ListPartialView")
 
+@{
+    var myViewData = new ViewDataDictionary(ViewData);
+    
+    myViewData["ListTitle"] = "Cities";
+    myViewData["ListItems"] = new List<string>()
+    {
+        "Japan",
+        "Canada",
+        "USA",
+        "Germany",
+        "France"
+    };
+}
+
+<h3>@ViewBag.ListTitle</h3>
+
 @* @{ *@
 @*     await Html.RenderPartialAsync("_ListPartialView"); *@
 @* } *@
 
-@* <partial name="~/Views/Shared/_ListPartialView.cshtml" /> *@
+@* <partial name="~/Views/Shared/_ListPartialView.cshtml" view-data="myViewData" /> *@
