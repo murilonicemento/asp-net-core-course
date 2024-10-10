@@ -1,1 +1,17 @@
+@using PartialViews.Models
+
 <h1>About</h1>
+
+@{
+    ListModel listModel = new ListModel();
+    listModel.ListTitle = "Programming Languages";
+    listModel.ListItems = new List<string>()
+    {
+        "C",
+        "C++",
+        "C#",
+        "Java",
+    };
+
+    await Html.RenderPartialAsync("_ListPartialView", listModel);
+}

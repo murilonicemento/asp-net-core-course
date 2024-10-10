@@ -1,11 +1,20 @@
+@model PartialViews.Models.ListModel
+
 <div class="list-container">
     
     @{
         ViewBag.ListTitle = "Updated";
     }
-    <h3>@ViewBag.ListTitle</h3>
+    @* <h3>@ViewBag.ListTitle</h3> *@
+    @* <ul class="list"> *@
+    @*     @foreach (string item in ViewBag.ListItems) *@
+    @*     { *@
+    @*         <li>@item</li> *@
+    @*     } *@
+    @* </ul> *@
+    <h3>@Model.ListTitle</h3>
     <ul class="list">
-        @foreach (string item in ViewBag.ListItems)
+        @foreach (string item in Model.ListItems)
         {
             <li>@item</li>
         }

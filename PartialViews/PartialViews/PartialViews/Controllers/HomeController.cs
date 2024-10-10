@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using PartialViews.Models;
 
 namespace PartialViews.Controllers;
 
@@ -7,15 +8,6 @@ public class HomeController : Controller
     [Route("/")]
     public IActionResult Index()
     {
-        ViewData["ListTitle"] = "Cities";
-        ViewData["ListItems"] = new List<string>()
-        {
-            "Tokyo",
-            "Kyoto",
-            "Shibuya",
-            "Okinawa",
-            "New York"
-        };
         return View();
     }
 
@@ -23,5 +15,25 @@ public class HomeController : Controller
     public IActionResult About()
     {
         return View();
+    }
+
+    [Route("programming-languages")]
+    public IActionResult ProgrammingLanguages()
+    {
+        ListModel listModel = new ListModel()
+        {
+            ListTitle = "Programming Languages",
+            ListItems = new List<string>()
+            {
+                "JavaScript",
+                "Python",
+                "Go",
+                "PHP"
+            }
+        };
+
+        // return new PartialViewResult() { ViewName = "_ListPartialView", Model = listModel };
+
+        return PartialView("_ListPartialView", listModel);
     }
 }

@@ -1,25 +1,57 @@
+@using PartialViews.Models
+
+@* *@
 <h1>Home</h1>
+@* *@
+@* @{ *@
+@*     ListModel listModel = new ListModel(); *@
+@*     listModel.ListTitle = "Countries"; *@
+@*     listModel.ListItems = new List<string>() *@
+@*     { *@
+@*         "Japan", *@
+@*         "Canada", *@
+@*         "USA", *@
+@*         "Germany", *@
+@*         "France" *@
+@*     }; *@
+@* } *@
+@* *@
+@* @await Html.PartialAsync("_ListPartialView", listModel) *@
 
-@await Html.PartialAsync("_ListPartialView")
-
-@{
-    var myViewData = new ViewDataDictionary(ViewData);
-    
-    myViewData["ListTitle"] = "Cities";
-    myViewData["ListItems"] = new List<string>()
-    {
-        "Japan",
-        "Canada",
-        "USA",
-        "Germany",
-        "France"
-    };
-}
-
-<h3>@ViewBag.ListTitle</h3>
+@* @{ *@
+@*     var myViewData = new ViewDataDictionary(ViewData); *@
+@* *@
+@*     myViewData["ListTitle"] = "Cities"; *@
+@*     myViewData["ListItems"] = new List<string>() *@
+@*     { *@
+@*         "Japan", *@
+@*         "Canada", *@
+@*         "USA", *@
+@*         "Germany", *@
+@*         "France" *@
+@*     }; *@
+@* } *@
+@* *@
+@* <h3>@ViewBag.ListTitle</h3> *@
 
 @* @{ *@
 @*     await Html.RenderPartialAsync("_ListPartialView"); *@
 @* } *@
 
-@* <partial name="~/Views/Shared/_ListPartialView.cshtml" view-data="myViewData" /> *@
+@* <partial name="~/Views/Shared/_ListPartialView.cshtml" view-data="myViewData" model="listModel" /> *@
+
+<button class="button button-blue-black" type="button" id="button-load">Load Programming Languages</button>
+
+<div class="box programming-languages-content">
+    
+</div>
+
+<script type="text/ecmascript">
+    document.querySelector("#button-load").addEventListener("click", async () => {
+        const response = await fetch("http://localhost:5149/programming-languages");
+        
+        const languages = await response.text();
+        
+        document.querySelector(".programming-languages-content").innerHTML = languages;
+    });
+</script>
