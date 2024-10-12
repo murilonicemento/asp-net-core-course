@@ -31,3 +31,5 @@
 /home/murilonicemento/Projects/asp-net-core-course/DependencyInjection/DependencyInjection/DependencyInjection/obj/Debug/net8.0/DependencyInjection.pdb
 /home/murilonicemento/Projects/asp-net-core-course/DependencyInjection/DependencyInjection/DependencyInjection/obj/Debug/net8.0/DependencyInjection.genruntimeconfig.cache
 /home/murilonicemento/Projects/asp-net-core-course/DependencyInjection/DependencyInjection/DependencyInjection/obj/Debug/net8.0/ref/DependencyInjection.dll
+/home/murilonicemento/Projects/asp-net-core-course/DependencyInjection/DependencyInjection/DependencyInjection/bin/Debug/net8.0/ServiceContracts.dll
+/home/murilonicemento/Projects/asp-net-core-course/DependencyInjection/DependencyInjection/DependencyInjection/bin/Debug/net8.0/ServiceContracts.pdb

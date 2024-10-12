@@ -6,17 +6,17 @@ namespace DependencyInjection.Controllers;
 
 public class HomeController : Controller
 {
-    private readonly ICitiesService _citiesService;
-
-    public HomeController(ICitiesService citiesService)
-    {
-        _citiesService = citiesService;
-    }
+    // private readonly ICitiesService _citiesService;
+    //
+    // public HomeController(ICitiesService citiesService)
+    // {
+    //     _citiesService = citiesService;
+    // }
 
     [Route("/")]
-    public IActionResult Index()
+    public IActionResult Index([FromServices] ICitiesService citiesService)
     {
-        List<string> cities = _citiesService.GetCities();
+        List<string> cities = citiesService.GetCities();
         return View(cities);
     }
 }

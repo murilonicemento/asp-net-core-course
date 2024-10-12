@@ -10,3 +10,7 @@
 /home/murilonicemento/Projects/asp-net-core-course/DependencyInjection/DependencyInjection/Services/obj/Debug/net8.0/refint/Services.dll
 /home/murilonicemento/Projects/asp-net-core-course/DependencyInjection/DependencyInjection/Services/obj/Debug/net8.0/Services.pdb
 /home/murilonicemento/Projects/asp-net-core-course/DependencyInjection/DependencyInjection/Services/obj/Debug/net8.0/ref/Services.dll
+/home/murilonicemento/Projects/asp-net-core-course/DependencyInjection/DependencyInjection/Services/bin/Debug/net8.0/ServiceContracts.dll
+/home/murilonicemento/Projects/asp-net-core-course/DependencyInjection/DependencyInjection/Services/bin/Debug/net8.0/ServiceContracts.pdb
+/home/murilonicemento/Projects/asp-net-core-course/DependencyInjection/DependencyInjection/Services/obj/Debug/net8.0/Services.csproj.AssemblyReference.cache
+/home/murilonicemento/Projects/asp-net-core-course/DependencyInjection/DependencyInjection/Services/obj/Debug/net8.0/Services.csproj.Up2Date
