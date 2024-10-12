@@ -1,0 +1,39 @@
+{
+  "Version": 1,
+  "Hash": "CSersS4lSGRrUMy4um/9rIjxfa30axX3H5Rmbxak5MU=",
+  "Source": "DependencyInjection",
+  "BasePath": "_content/DependencyInjection",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "DependencyInjection/wwwroot",
+      "Source": "DependencyInjection",
+      "ContentRoot": "/home/murilonicemento/Projects/asp-net-core-course/DependencyInjection/DependencyInjection/DependencyInjection/wwwroot/",
+      "BasePath": "_content/DependencyInjection",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "/home/murilonicemento/Projects/asp-net-core-course/DependencyInjection/DependencyInjection/DependencyInjection/wwwroot/StyleSheet.css",
+      "SourceId": "DependencyInjection",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/murilonicemento/Projects/asp-net-core-course/DependencyInjection/DependencyInjection/DependencyInjection/wwwroot/",
+      "BasePath": "_content/DependencyInjection",
+      "RelativePath": "StyleSheet.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/StyleSheet.css"
+    }
+  ]
+}

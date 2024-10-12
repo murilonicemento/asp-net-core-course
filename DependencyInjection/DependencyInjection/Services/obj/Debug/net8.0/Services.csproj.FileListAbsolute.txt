@@ -1,0 +1,12 @@
+/home/murilonicemento/Projects/asp-net-core-course/DependencyInjection/DependencyInjection/Services/bin/Debug/net8.0/Services.deps.json
+/home/murilonicemento/Projects/asp-net-core-course/DependencyInjection/DependencyInjection/Services/bin/Debug/net8.0/Services.dll
+/home/murilonicemento/Projects/asp-net-core-course/DependencyInjection/DependencyInjection/Services/bin/Debug/net8.0/Services.pdb
+/home/murilonicemento/Projects/asp-net-core-course/DependencyInjection/DependencyInjection/Services/obj/Debug/net8.0/Services.GeneratedMSBuildEditorConfig.editorconfig
+/home/murilonicemento/Projects/asp-net-core-course/DependencyInjection/DependencyInjection/Services/obj/Debug/net8.0/Services.AssemblyInfoInputs.cache
+/home/murilonicemento/Projects/asp-net-core-course/DependencyInjection/DependencyInjection/Services/obj/Debug/net8.0/Services.AssemblyInfo.cs
+/home/murilonicemento/Projects/asp-net-core-course/DependencyInjection/DependencyInjection/Services/obj/Debug/net8.0/Services.csproj.CoreCompileInputs.cache
+/home/murilonicemento/Projects/asp-net-core-course/DependencyInjection/DependencyInjection/Services/obj/Debug/net8.0/Services.sourcelink.json
+/home/murilonicemento/Projects/asp-net-core-course/DependencyInjection/DependencyInjection/Services/obj/Debug/net8.0/Services.dll
+/home/murilonicemento/Projects/asp-net-core-course/DependencyInjection/DependencyInjection/Services/obj/Debug/net8.0/refint/Services.dll
+/home/murilonicemento/Projects/asp-net-core-course/DependencyInjection/DependencyInjection/Services/obj/Debug/net8.0/Services.pdb
+/home/murilonicemento/Projects/asp-net-core-course/DependencyInjection/DependencyInjection/Services/obj/Debug/net8.0/ref/Services.dll
