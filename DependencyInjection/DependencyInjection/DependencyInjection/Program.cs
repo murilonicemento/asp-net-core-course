@@ -10,7 +10,7 @@ builder.Services.Add
     (
         typeof(ICitiesService),
         typeof(CitiesService),
-        ServiceLifetime.Singleton
+        ServiceLifetime.Scoped
     )
 );
 

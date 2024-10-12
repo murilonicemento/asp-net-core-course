@@ -2,7 +2,7 @@
 
 namespace Services;
 
-public class CitiesService : ICitiesService
+public class CitiesService : ICitiesService, IDisposable
 {
     private List<string> _cities;
     private Guid _serviceInstanceId;
@@ -25,7 +25,13 @@ public class CitiesService : ICitiesService
             "Okinawa",
             "Rome"
         };
+        
+        // some logic to open a database connection
     }
 
     public List<string> GetCities() => _cities;
+    public void Dispose()
+    {
+        // some logic to close a database connection
+    }
 }
