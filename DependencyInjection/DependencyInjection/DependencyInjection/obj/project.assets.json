@@ -2,9 +2,22 @@
   "version": 3,
   "targets": {
     "net8.0": {
+      "ServiceContracts/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/ServiceContracts.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ServiceContracts.dll": {}
+        }
+      },
       "Services/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "ServiceContracts": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/Services.dll": {}
         },
@@ -15,6 +28,11 @@
     }
   },
   "libraries": {
+    "ServiceContracts/1.0.0": {
+      "type": "project",
+      "path": "../ServiceContracts/ServiceContracts.csproj",
+      "msbuildProject": "../ServiceContracts/ServiceContracts.csproj"
+    },
     "Services/1.0.0": {
       "type": "project",
       "path": "../Services/Services.csproj",
@@ -23,6 +41,7 @@
   },
   "projectFileDependencyGroups": {
     "net8.0": [
+      "ServiceContracts >= 1.0.0",
       "Services >= 1.0.0"
     ]
   },
@@ -51,6 +70,9 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
+            "/home/murilonicemento/Projects/asp-net-core-course/DependencyInjection/DependencyInjection/ServiceContracts/ServiceContracts.csproj": {
+              "projectPath": "/home/murilonicemento/Projects/asp-net-core-course/DependencyInjection/DependencyInjection/ServiceContracts/ServiceContracts.csproj"
+            },
             "/home/murilonicemento/Projects/asp-net-core-course/DependencyInjection/DependencyInjection/Services/Services.csproj": {
               "projectPath": "/home/murilonicemento/Projects/asp-net-core-course/DependencyInjection/DependencyInjection/Services/Services.csproj"
             }

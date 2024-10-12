@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DependencyInjection", "Depe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services", "Services\Services.csproj", "{A12F915F-DCD0-4C5A-9DBA-3CE4CD3EA1D9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceContracts", "ServiceContracts\ServiceContracts.csproj", "{ED0CB2B2-4427-4103-8801-F3E8F72CF09F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{A12F915F-DCD0-4C5A-9DBA-3CE4CD3EA1D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A12F915F-DCD0-4C5A-9DBA-3CE4CD3EA1D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A12F915F-DCD0-4C5A-9DBA-3CE4CD3EA1D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED0CB2B2-4427-4103-8801-F3E8F72CF09F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED0CB2B2-4427-4103-8801-F3E8F72CF09F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED0CB2B2-4427-4103-8801-F3E8F72CF09F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED0CB2B2-4427-4103-8801-F3E8F72CF09F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

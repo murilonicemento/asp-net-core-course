@@ -4,6 +4,64 @@
     "/home/murilonicemento/Projects/asp-net-core-course/DependencyInjection/DependencyInjection/Services/Services.csproj": {}
   },
   "projects": {
+    "/home/murilonicemento/Projects/asp-net-core-course/DependencyInjection/DependencyInjection/ServiceContracts/ServiceContracts.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/murilonicemento/Projects/asp-net-core-course/DependencyInjection/DependencyInjection/ServiceContracts/ServiceContracts.csproj",
+        "projectName": "ServiceContracts",
+        "projectPath": "/home/murilonicemento/Projects/asp-net-core-course/DependencyInjection/DependencyInjection/ServiceContracts/ServiceContracts.csproj",
+        "packagesPath": "/home/murilonicemento/.nuget/packages/",
+        "outputPath": "/home/murilonicemento/Projects/asp-net-core-course/DependencyInjection/DependencyInjection/ServiceContracts/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/murilonicemento/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/home/murilonicemento/.dotnet/sdk/8.0.302/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "/home/murilonicemento/Projects/asp-net-core-course/DependencyInjection/DependencyInjection/Services/Services.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -25,7 +83,11 @@
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "/home/murilonicemento/Projects/asp-net-core-course/DependencyInjection/DependencyInjection/ServiceContracts/ServiceContracts.csproj": {
+                "projectPath": "/home/murilonicemento/Projects/asp-net-core-course/DependencyInjection/DependencyInjection/ServiceContracts/ServiceContracts.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

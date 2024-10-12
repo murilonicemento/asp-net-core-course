@@ -10,12 +10,12 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("DependencyInjection")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("ServiceContracts")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+95cfcae4a0358cb24a49a72611a7ff97655ea909")]
-[assembly: System.Reflection.AssemblyProductAttribute("DependencyInjection")]
-[assembly: System.Reflection.AssemblyTitleAttribute("DependencyInjection")]
+[assembly: System.Reflection.AssemblyProductAttribute("ServiceContracts")]
+[assembly: System.Reflection.AssemblyTitleAttribute("ServiceContracts")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 
 // Gerado pela classe WriteCodeFragment do MSBuild.
