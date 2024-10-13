@@ -1,0 +1,39 @@
+{
+  "Version": 1,
+  "Hash": "r9jACAPo2gy7xWXuB7Om4KWk+9cp/MFZYZ+soeKq7tw=",
+  "Source": "Environments",
+  "BasePath": "_content/Environments",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "Environments/wwwroot",
+      "Source": "Environments",
+      "ContentRoot": "/home/murilonicemento/Projects/asp-net-core-course/Environments/Environments/Environments/wwwroot/",
+      "BasePath": "_content/Environments",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "/home/murilonicemento/Projects/asp-net-core-course/Environments/Environments/Environments/wwwroot/StyleSheet.css",
+      "SourceId": "Environments",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/murilonicemento/Projects/asp-net-core-course/Environments/Environments/Environments/wwwroot/",
+      "BasePath": "_content/Environments",
+      "RelativePath": "StyleSheet.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/StyleSheet.css"
+    }
+  ]
+}

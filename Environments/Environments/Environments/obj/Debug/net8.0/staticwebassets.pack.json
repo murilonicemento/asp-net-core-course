@@ -1,0 +1,25 @@
+{
+  "Files": [
+    {
+      "Id": "/home/murilonicemento/Projects/asp-net-core-course/Environments/Environments/Environments/wwwroot/StyleSheet.css",
+      "PackagePath": "staticwebassets/StyleSheet.css"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.Environments.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.build.Environments.props",
+      "PackagePath": "build\\Environments.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.Environments.props",
+      "PackagePath": "buildMultiTargeting\\Environments.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.Environments.props",
+      "PackagePath": "buildTransitive\\Environments.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
