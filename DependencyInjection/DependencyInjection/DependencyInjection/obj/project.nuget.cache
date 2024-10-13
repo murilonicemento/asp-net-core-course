@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "bv6+c3ZXAt8=",
+  "dgSpecHash": "sYMyokYqSvQ=",
   "success": true,
   "projectFilePath": "/home/murilonicemento/Projects/asp-net-core-course/DependencyInjection/DependencyInjection/DependencyInjection/DependencyInjection.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/home/murilonicemento/.nuget/packages/autofac/6.3.0/autofac.6.3.0.nupkg.sha512",
+    "/home/murilonicemento/.nuget/packages/autofac.extensions.dependencyinjection/7.2.0/autofac.extensions.dependencyinjection.7.2.0.nupkg.sha512",
+    "/home/murilonicemento/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/6.0.0/microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
+    "/home/murilonicemento/.nuget/packages/system.diagnostics.diagnosticsource/4.7.1/system.diagnostics.diagnosticsource.4.7.1.nupkg.sha512"
+  ],
   "logs": []
 }
