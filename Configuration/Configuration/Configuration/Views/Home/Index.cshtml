@@ -1,0 +1,30 @@
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html lang="pt-br">
+<head>
+    <title>title</title>
+    <meta charset="UTF-8"/>
+    <link href="StyleSheet.css" rel="stylesheet"/>
+</head>
+<body>
+<div>
+    <div class="container">
+        <h1>Home</h1>
+        
+        <div class="box">
+            <div>@ViewBag.MyKey</div>
+            <div>@ViewBag.MyApiKey</div>
+        </div>
+        
+        <div class="box">
+            <div>@ViewBag.ClientId</div>
+            <div>@ViewBag.ClientSecret</div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

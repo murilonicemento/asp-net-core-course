@@ -1,0 +1,25 @@
+{
+  "Files": [
+    {
+      "Id": "/home/murilonicemento/Projects/asp-net-core-course/Configuration/Configuration/Configuration/wwwroot/StyleSheet.css",
+      "PackagePath": "staticwebassets/StyleSheet.css"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.Configuration.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.build.Configuration.props",
+      "PackagePath": "build\\Configuration.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.Configuration.props",
+      "PackagePath": "buildMultiTargeting\\Configuration.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.Configuration.props",
+      "PackagePath": "buildTransitive\\Configuration.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
