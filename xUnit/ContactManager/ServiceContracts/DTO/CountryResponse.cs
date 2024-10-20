@@ -11,6 +11,21 @@ public class CountryResponse
     public Guid Id { get; set; }
 
     public string? Name { get; set; }
+
+    public override bool Equals(object? obj)
+    {
+        if (obj == null) return false;
+        if (obj.GetType() != typeof(CountryResponse)) return false;
+
+        CountryResponse countryResponse = (CountryResponse)obj;
+
+        return Id == countryResponse.Id && Name == countryResponse.Name;
+    }
+
+    public override int GetHashCode()
+    {
+        return base.GetHashCode();
+    }
 }
 
 public static class CountryExtensions
