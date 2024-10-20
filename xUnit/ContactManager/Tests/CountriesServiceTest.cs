@@ -1,3 +1,4 @@
+using NuGet.Frameworks;
 using ServiceContracts;
 using ServiceContracts.DTO;
 using Services;
@@ -102,6 +103,32 @@ public class CountriesServiceTest
         {
             Assert.Contains(expectedCountry, actualCountryResponseList);
         }
+    }
+
+    #endregion
+
+    #region GetCountryByCountryId
+
+    // If we supply null as CountryId, it should return null as CountryResponse
+    [Fact]
+    public void GetCountryByCountryId_NullCountryId()
+    {
+        Guid? countryId = null;
+
+        CountryResponse? countryResponseFromGetMethod = _countriesService.GetCountryByCountryId(countryId);
+
+        Assert.Null(countryResponseFromGetMethod);
+    }
+
+    // If we supply a valid CountryId, it should return the matching country details as CountryResponse object
+    [Fact]
+    public void GetCountryByCountryId_ValidCountryId()
+    {
+        CountryAddRequest countryAddRequest = new CountryAddRequest() { Name = "Japan" };
+        CountryResponse countryResponseFromAdd = _countriesService.AddCountry(countryAddRequest);
+        CountryResponse? countryResponseFromGet = _countriesService.GetCountryByCountryId(countryResponseFromAdd.Id);
+        
+        Assert.Equal(countryResponseFromAdd, countryResponseFromGet);
     }
 
     #endregion
