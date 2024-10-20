@@ -1,0 +1,12 @@
+/home/murilonicemento/Projects/asp-net-core-course/xUnit/ContactManager/Entities/bin/Debug/net8.0/Entities.deps.json
+/home/murilonicemento/Projects/asp-net-core-course/xUnit/ContactManager/Entities/bin/Debug/net8.0/Entities.dll
+/home/murilonicemento/Projects/asp-net-core-course/xUnit/ContactManager/Entities/bin/Debug/net8.0/Entities.pdb
+/home/murilonicemento/Projects/asp-net-core-course/xUnit/ContactManager/Entities/obj/Debug/net8.0/Entities.GeneratedMSBuildEditorConfig.editorconfig
+/home/murilonicemento/Projects/asp-net-core-course/xUnit/ContactManager/Entities/obj/Debug/net8.0/Entities.AssemblyInfoInputs.cache
+/home/murilonicemento/Projects/asp-net-core-course/xUnit/ContactManager/Entities/obj/Debug/net8.0/Entities.AssemblyInfo.cs
+/home/murilonicemento/Projects/asp-net-core-course/xUnit/ContactManager/Entities/obj/Debug/net8.0/Entities.csproj.CoreCompileInputs.cache
+/home/murilonicemento/Projects/asp-net-core-course/xUnit/ContactManager/Entities/obj/Debug/net8.0/Entities.sourcelink.json
+/home/murilonicemento/Projects/asp-net-core-course/xUnit/ContactManager/Entities/obj/Debug/net8.0/Entities.dll
+/home/murilonicemento/Projects/asp-net-core-course/xUnit/ContactManager/Entities/obj/Debug/net8.0/refint/Entities.dll
+/home/murilonicemento/Projects/asp-net-core-course/xUnit/ContactManager/Entities/obj/Debug/net8.0/Entities.pdb
+/home/murilonicemento/Projects/asp-net-core-course/xUnit/ContactManager/Entities/obj/Debug/net8.0/ref/Entities.dll
