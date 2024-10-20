@@ -46,6 +46,12 @@ public class CountriesService : ICountriesService
 
     public CountryResponse? GetCountryByCountryId(Guid? countryId)
     {
-        throw new NotImplementedException();
+        if (countryId == null) return null;
+
+        Country? countryFromList = _countries.FirstOrDefault(country => country.Id == countryId);
+
+        if (countryFromList == null) return null;
+
+        return countryFromList.ToCountryResponse();
     }
 }
