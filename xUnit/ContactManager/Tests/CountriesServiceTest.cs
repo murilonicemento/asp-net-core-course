@@ -13,6 +13,8 @@ public class CountriesServiceTest
         _countriesService = new CountriesService();
     }
 
+    #region AddCountry
+
     // When CountryAddRequests is null, it should throw ArgumentNullException
     [Fact]
     public void AddCountry_NullCountry()
@@ -52,7 +54,55 @@ public class CountriesServiceTest
         CountryAddRequest? request = new CountryAddRequest() { Name = "Japan" };
 
         CountryResponse response = _countriesService.AddCountry(request);
+        List<CountryResponse> countriesFromGetAllCountries = _countriesService.GetAllCountries();
 
         Assert.True(response.Id != Guid.Empty);
+        Assert.Contains(response, countriesFromGetAllCountries);
     }
+
+    #endregion
+
+    #region GetAllCountries
+
+    // The list of countries should be empty by default (before adding any countries)
+    [Fact]
+    public void GetAllCountries_EmptyList()
+    {
+        List<CountryResponse> actualCountryResponseList = _countriesService.GetAllCountries();
+
+        Assert.Empty(actualCountryResponseList);
+    }
+
+    [Fact]
+    public void GetAllCountries_AddFewCountries()
+    {
+        List<CountryAddRequest> countryAddRequests =
+            new List<CountryAddRequest>()
+            {
+                new CountryAddRequest()
+                {
+                    Name = "Japan"
+                },
+                new CountryAddRequest()
+                {
+                    Name = "Brazil"
+                },
+            };
+
+        List<CountryResponse> countriesListFromAddCountry = new List<CountryResponse>();
+
+        foreach (CountryAddRequest countryRequest in countryAddRequests)
+        {
+            countriesListFromAddCountry.Add(_countriesService.AddCountry(countryRequest));
+        }
+
+        List<CountryResponse> actualCountryResponseList = _countriesService.GetAllCountries();
+
+        foreach (CountryResponse expectedCountry in countriesListFromAddCountry)
+        {
+            Assert.Contains(expectedCountry, actualCountryResponseList);
+        }
+    }
+
+    #endregion
 }

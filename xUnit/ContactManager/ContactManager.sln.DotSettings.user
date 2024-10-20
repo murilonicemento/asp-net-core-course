@@ -6,5 +6,7 @@
     &lt;TestId&gt;xUnit::0659F18B-68C9-4285-B2DD-98FBB0A7F2A1::net8.0::Tests.CountriesServiceTest.AddCountry_CountryNameIsNull&lt;/TestId&gt;
     &lt;TestId&gt;xUnit::0659F18B-68C9-4285-B2DD-98FBB0A7F2A1::net8.0::Tests.CountriesServiceTest.AddCountry_CountryNameIsDuplicate&lt;/TestId&gt;
     &lt;TestId&gt;xUnit::0659F18B-68C9-4285-B2DD-98FBB0A7F2A1::net8.0::Tests.CountriesServiceTest.AddCountry_ProperCountryDetails&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::0659F18B-68C9-4285-B2DD-98FBB0A7F2A1::net8.0::Tests.CountriesServiceTest.GetAllCountries_EmptyList&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::0659F18B-68C9-4285-B2DD-98FBB0A7F2A1::net8.0::Tests.CountriesServiceTest.GetAllCountries_AddFewCountries&lt;/TestId&gt;
   &lt;/TestAncestor&gt;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
