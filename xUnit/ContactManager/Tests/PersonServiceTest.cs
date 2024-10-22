@@ -100,4 +100,63 @@ public class PersonServiceTest
     }
 
     #endregion
+
+    #region GetAllPerson
+
+    // should return an empty list by default
+    [Fact]
+    public void GetAllPerson_EmptyByDefault()
+    {
+        List<PersonResponse> personResponses = _personsService.GetAllPersons();
+
+        Assert.Empty(personResponses);
+    }
+
+    // first we will add few persons; and then when we call GetAllPersons(), it should return the same persons that were added
+    [Fact]
+    public void GetAllPerson_ProperPersonsDetails()
+    {
+        // first person
+        List<PersonResponse> personResponses = new List<PersonResponse>();
+        CountryAddRequest countryAddRequest = new CountryAddRequest() { Name = "Switzerland" };
+        CountryResponse countryResponse = _countriesService.AddCountry(countryAddRequest);
+        PersonAddRequest personAddRequest = new PersonAddRequest()
+        {
+            Name = "Yeti",
+            Email = "yeti@gmail.com",
+            Address = countryResponse.Name,
+            Gender = GenderOptions.Male,
+            CountryId = countryResponse.Id,
+            DateOfBirth = DateTime.Parse("2002-05-28"),
+            ReceiveNewsLetters = true
+        };
+        // second person
+        CountryAddRequest countryAddRequest1 = new CountryAddRequest() { Name = "Brazil" };
+        CountryResponse countryResponse1 = _countriesService.AddCountry(countryAddRequest1);
+        PersonAddRequest personAddRequest1 = new PersonAddRequest()
+        {
+            Name = "Ronaldo",
+            Email = "ronaldo@gmail.com",
+            Address = countryResponse1.Name,
+            Gender = GenderOptions.Male,
+            CountryId = countryResponse1.Id,
+            DateOfBirth = DateTime.Parse("1985-01-05"),
+            ReceiveNewsLetters = false
+        };
+
+        PersonResponse personResponse = _personsService.AddPerson(personAddRequest);
+        PersonResponse personResponse1 = _personsService.AddPerson(personAddRequest1);
+
+        personResponses.Add(personResponse);
+        personResponses.Add(personResponse1);
+
+        List<PersonResponse> personResponsesGetAll = _personsService.GetAllPersons();
+
+        foreach (PersonResponse person in personResponses)
+        {
+            Assert.Contains(person, personResponsesGetAll);
+        }
+    }
+
+    #endregion
 }
