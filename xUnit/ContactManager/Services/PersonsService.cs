@@ -42,4 +42,9 @@ public class PersonsService : IPersonsService
     {
         throw new NotImplementedException();
     }
+
+    public PersonResponse? GetPersonByPersonId(Guid? id)
+    {
+        throw new NotImplementedException();
+    }
 }
