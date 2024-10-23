@@ -47,4 +47,9 @@ public class PersonsService : IPersonsService
     {
         return _persons.FirstOrDefault(person => person.Id == id)?.ToPersonResponse();
     }
+
+    public List<PersonResponse> GetFilteredPerson(string searchBy, string? searchString)
+    {
+        throw new NotImplementedException();
+    }
 }

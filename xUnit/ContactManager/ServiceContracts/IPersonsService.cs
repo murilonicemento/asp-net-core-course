@@ -14,7 +14,7 @@ public interface IPersonsService
     /// <param name="personAddRequest">Person to add</param>
     /// <returns>Returns the same person details, along with newly generated person id</returns>
     PersonResponse AddPerson(PersonAddRequest? personAddRequest);
-    
+
     /// <summary>
     /// Returns all persons
     /// </summary>
@@ -27,4 +27,12 @@ public interface IPersonsService
     /// <param name="id">Person id to search</param>
     /// <returns>Matching person object</returns>
     PersonResponse? GetPersonByPersonId(Guid? id);
+
+    /// <summary>
+    /// Return all person objects that matches with the given search field and search string
+    /// </summary>
+    /// <param name="searchBy">Search field to search</param>
+    /// <param name="searchString">Search string to search</param>
+    /// <returns>Returns all matching persons based on the given search field and search string</returns>
+    List<PersonResponse> GetFilteredPerson(string searchBy, string? searchString);
 }
