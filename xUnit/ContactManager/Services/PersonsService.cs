@@ -40,7 +40,7 @@ public class PersonsService : IPersonsService
 
     public List<PersonResponse> GetAllPersons()
     {
-        throw new NotImplementedException();
+        return _persons.Select(person => person.ToPersonResponse()).ToList();
     }
 
     public PersonResponse? GetPersonByPersonId(Guid? id)
