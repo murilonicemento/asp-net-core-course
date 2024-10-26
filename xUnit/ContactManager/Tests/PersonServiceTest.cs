@@ -300,4 +300,71 @@ public class PersonServiceTest
     }
 
     #endregion
+
+    #region GetSortedPersons
+
+    // When we sort based on PersonName in DESC order, it should return persons list in descending on PersonName
+    [Fact]
+    public void GetSortedPersons_SearchByPersonName()
+    {
+        // first person
+        List<PersonResponse> personResponses = new List<PersonResponse>();
+        CountryAddRequest countryAddRequest = new CountryAddRequest() { Name = "Switzerland" };
+        CountryResponse countryResponse = _countriesService.AddCountry(countryAddRequest);
+        PersonAddRequest personAddRequest = new PersonAddRequest()
+        {
+            Name = "Ronaldo",
+            Email = "ronaldo@gmail.com",
+            Address = countryResponse.Name,
+            Gender = GenderOptions.Male,
+            CountryId = countryResponse.Id,
+            DateOfBirth = DateTime.Parse("2002-05-28"),
+            ReceiveNewsLetters = true
+        };
+        // second person
+        CountryAddRequest countryAddRequest1 = new CountryAddRequest() { Name = "Brazil" };
+        CountryResponse countryResponse1 = _countriesService.AddCountry(countryAddRequest1);
+        PersonAddRequest personAddRequest1 = new PersonAddRequest()
+        {
+            Name = "Mary",
+            Email = "mary@gmail.com",
+            Address = countryResponse1.Name,
+            Gender = GenderOptions.Male,
+            CountryId = countryResponse1.Id,
+            DateOfBirth = DateTime.Parse("1985-01-05"),
+            ReceiveNewsLetters = false
+        };
+
+        PersonResponse personResponse = _personsService.AddPerson(personAddRequest);
+        PersonResponse personResponse1 = _personsService.AddPerson(personAddRequest1);
+
+        personResponses.Add(personResponse);
+        personResponses.Add(personResponse1);
+
+        _testOutputHelper.WriteLine("Expected:");
+        foreach (PersonResponse person in personResponses)
+        {
+            _testOutputHelper.WriteLine(person.ToString());
+        }
+
+        List<PersonResponse> allPerson = _personsService.GetAllPersons();
+
+        List<PersonResponse> personResponsesSearch =
+            _personsService.GetSortedPersons(allPerson, nameof(Person.Name), SortOrderOptions.DESC);
+
+        _testOutputHelper.WriteLine("Actual:");
+        foreach (PersonResponse person in personResponsesSearch)
+        {
+            _testOutputHelper.WriteLine(person.ToString());
+        }
+
+        personResponses = personResponses.OrderByDescending(person => person.Name).ToList();
+
+        for (int i = 0; i < allPerson.Count; i++)
+        {
+            Assert.Equal(allPerson[i], personResponsesSearch[i]);
+        }
+    }
+
+    #endregion
 }
