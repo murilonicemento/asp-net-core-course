@@ -142,6 +142,24 @@ public class PersonsService : IPersonsService
 
     public PersonResponse UpdatePerson(PersonUpdateRequest? personUpdateRequest)
     {
-        throw new NotImplementedException();
+        ArgumentNullException.ThrowIfNull(personUpdateRequest);
+        ValidationHelper.ModelValidation(personUpdateRequest);
+
+        Person? person = _persons.FirstOrDefault(person => person.Id == personUpdateRequest.Id);
+
+        if (person is null)
+        {
+            throw new ArgumentException("Given person id doesn't exist.");
+        }
+
+        person.Name = personUpdateRequest.Name;
+        person.Email = personUpdateRequest.Email;
+        person.DateOfBirth = personUpdateRequest.DateOfBirth;
+        person.Gender = personUpdateRequest.Gender.ToString();
+        person.CountryId = personUpdateRequest.CountryId;
+        person.Address = personUpdateRequest.Address;
+        person.ReceiveNewsLetters = personUpdateRequest.ReceiveNewsLetters;
+
+        return person.ToPersonResponse();
     }
 }

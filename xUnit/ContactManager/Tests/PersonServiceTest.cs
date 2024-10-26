@@ -414,7 +414,7 @@ public class PersonServiceTest
         CountryResponse countryResponse = _countriesService.AddCountry(countryAddRequest);
         PersonAddRequest personAddRequest = new PersonAddRequest()
         {
-            Name = null,
+            Name = "Yeti",
             Email = "yeti@gmail.com",
             DateOfBirth = DateTime.Parse("2002-08-09"),
             Gender = GenderOptions.Male,
@@ -424,6 +424,7 @@ public class PersonServiceTest
         };
 
         PersonResponse personResponse = _personsService.AddPerson(personAddRequest);
+        personResponse.Name = null;
         PersonUpdateRequest personUpdateRequest = personResponse.ToPersonUpdateRequest();
 
         Assert.Throws<ArgumentException>(() => { _personsService.UpdatePerson(personUpdateRequest); });
