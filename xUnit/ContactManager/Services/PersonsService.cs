@@ -70,7 +70,7 @@ public class PersonsService : IPersonsService
             case nameof(Person.DateOfBirth):
                 matchingPersons = allPersons.Where(person =>
                     person.DateOfBirth == null || person.DateOfBirth.Value.ToString("dd MMMM yyyy")
-                    .Contains(searchString, StringComparison.OrdinalIgnoreCase)).ToList();
+                        .Contains(searchString, StringComparison.OrdinalIgnoreCase)).ToList();
                 break;
             case nameof(Person.Gender):
                 matchingPersons = allPersons.Where(person =>
@@ -138,5 +138,10 @@ public class PersonsService : IPersonsService
         };
 
         return personResponses;
+    }
+
+    public PersonResponse UpdatePerson(PersonUpdateRequest? personUpdateRequest)
+    {
+        throw new NotImplementedException();
     }
 }
