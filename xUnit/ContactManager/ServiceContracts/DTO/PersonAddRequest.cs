@@ -25,7 +25,7 @@ public class PersonAddRequest
     /// <summary>
     /// Converts the current object of PersonAddRequest into a new object of Person type
     /// </summary>
-    /// <returns></returns>
+    /// <returns>Person object</returns>
     public Person ToPerson()
     {
         return new Person()
