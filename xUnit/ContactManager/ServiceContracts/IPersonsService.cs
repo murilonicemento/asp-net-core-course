@@ -51,4 +51,11 @@ public interface IPersonsService
     /// <param name="personUpdateRequest"> person details to update</param>
     /// <returns>Returns a PersonResponse object</returns>
     PersonResponse UpdatePerson(PersonUpdateRequest? personUpdateRequest);
+
+    /// <summary>
+    /// Deletes a person base on the given id
+    /// </summary>
+    /// <param name="id">person id to delete</param>
+    /// <returns>return true, if the deletion is successful, otherwise false</returns>
+    bool DeletePerson(Guid? id);
 }

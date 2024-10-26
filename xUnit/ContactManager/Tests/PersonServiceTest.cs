@@ -458,9 +458,44 @@ public class PersonServiceTest
 
         PersonResponse personResponseFromUpdate = _personsService.UpdatePerson(personUpdateRequest);
         PersonResponse? personResponseFromGet = _personsService.GetPersonByPersonId(personResponseFromUpdate.Id);
-        
-        Assert.Equal(personResponseFromGet, personResponseFromUpdate);
 
+        Assert.Equal(personResponseFromGet, personResponseFromUpdate);
+    }
+
+    #endregion
+
+    #region DeletePerson
+
+    // If supply valid person id, it should return true
+    [Fact]
+    public void DeletePerson_ValidId()
+    {
+        CountryAddRequest countryAddRequest = new CountryAddRequest() { Name = "Japan" };
+        CountryResponse countryResponse = _countriesService.AddCountry(countryAddRequest: countryAddRequest);
+        PersonAddRequest personAddRequest = new PersonAddRequest()
+        {
+            Name = "Yeti",
+            Email = "yeti@gmail.com",
+            DateOfBirth = DateTime.Parse("2002-08-09"),
+            Gender = GenderOptions.Male,
+            CountryId = countryResponse.Id,
+            Address = "Rua",
+            ReceiveNewsLetters = true
+        };
+
+        PersonResponse personResponse = _personsService.AddPerson(personAddRequest);
+        bool isDeleted = _personsService.DeletePerson(personResponse.Id);
+
+        Assert.True(isDeleted);
+    }
+
+    // If supply invalid person id, it should return false
+    [Fact]
+    public void DeletePerson_InvalidId()
+    {
+        bool isDeleted = _personsService.DeletePerson(Guid.NewGuid());
+
+        Assert.False(isDeleted);
     }
 
     #endregion

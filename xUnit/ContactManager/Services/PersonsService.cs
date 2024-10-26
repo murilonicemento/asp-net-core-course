@@ -162,4 +162,9 @@ public class PersonsService : IPersonsService
 
         return person.ToPersonResponse();
     }
+
+    public bool DeletePerson(Guid? id)
+    {
+        throw new NotImplementedException();
+    }
 }
