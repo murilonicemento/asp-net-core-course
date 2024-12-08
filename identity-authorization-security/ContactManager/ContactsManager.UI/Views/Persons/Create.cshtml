@@ -22,8 +22,8 @@
 
 <div class="form-container">
 
-    <a asp-controller="Persons" asp-action="Index" class="link-hover">Back to Persons List</a>
-<h2 class="text-large">Create Person</h2>
+ <a asp-controller="Persons" asp-action="Index" class="link-hover">Back to Persons List</a>
+ <h2 class="text-large">Create Person</h2>
 
  <form asp-controller="Persons" asp-action="Create" method="post">
 
@@ -33,7 +33,7 @@
     <label asp-for="PersonName" class="form-label pt">Person Name</label>
    </div>
    <div class="flex-1">
-    <input asp-for="PersonName" class="form-input" />
+    <input asp-for="PersonName" class="form-input"/>
     <span asp-validation-for="PersonName" class="text-red"></span>
    </div>
   </div>
@@ -45,7 +45,7 @@
     <label asp-for="Email" class="form-label pt">Email</label>
    </div>
    <div class="flex-1">
-    <input asp-for="Email" class="form-input" />
+    <input asp-for="Email" class="form-input"/>
     <span asp-validation-for="Email" class="text-red"></span>
    </div>
   </div>
@@ -56,7 +56,7 @@
     <label asp-for="DateOfBirth" class="form-label pt">Date of Birth</label>
    </div>
    <div class="flex-1">
-    <input type="date" asp-for="DateOfBirth" class="form-input" />
+    <input type="date" asp-for="DateOfBirth" class="form-input"/>
     <span asp-validation-for="DateOfBirth" class="text-red"></span>
    </div>
   </div>
@@ -72,7 +72,7 @@
     }
     @foreach (string gender in genders)
     {
-     <input type="radio" asp-for="Gender" value="@gender" id="@gender" />
+     <input type="radio" asp-for="Gender" value="@gender" id="@gender"/>
      <label for="@gender">@gender</label>
     }
     <span asp-validation-for="Gender" class="text-red"></span>
@@ -109,7 +109,7 @@
    <div class="w-25">
    </div>
    <div class="flex-1">
-    <input asp-for="ReceiveNewsLetters" value="true" />
+    <input asp-for="ReceiveNewsLetters" value="true"/>
     <label asp-for="ReceiveNewsLetters" class="form-label">Receive News Letters</label>
     <span asp-validation-for="ReceiveNewsLetters" class="text-red"></span>
    </div>
@@ -142,10 +142,16 @@
 </div>
 
 @section scripts
- {
- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" asp-fallback-test="window.jQuery" asp-fallback-src="~/jquery.min.js"></script>
+ 
+{
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" asp-fallback-test="window.jQuery"
+         asp-fallback-src="~/jquery.min.js"></script>
 
- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.4/jquery.validate.min.js" asp-fallback-test="window.jQuery.validator" asp-fallback-src="~/jquery.validate.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.4/jquery.validate.min.js"
+         asp-fallback-test="window.jQuery.validator" asp-fallback-src="~/jquery.validate.min.js"></script>
 
- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.12/jquery.validate.unobtrusive.min.js" asp-fallback-test="window.jQuery.validator.unobstrusive" asp-fallback-src="~/jquery.validate.unobtrusive.min.js"></script>
+ <script
+  src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.12/jquery.validate.unobtrusive.min.js"
+  asp-fallback-test="window.jQuery.validator.unobstrusive"
+  asp-fallback-src="~/jquery.validate.unobtrusive.min.js"></script>
 }
