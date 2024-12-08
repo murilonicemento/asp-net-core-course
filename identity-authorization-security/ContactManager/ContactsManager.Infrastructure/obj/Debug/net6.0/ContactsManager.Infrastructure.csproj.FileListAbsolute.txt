@@ -1,0 +1,16 @@
+/home/murilonicemento/Projects/asp-net-core-course/identity-authorization-security/ContactManager/ContactsManager.Infrastructure/bin/Debug/net6.0/ContactsManager.Infrastructure.deps.json
+/home/murilonicemento/Projects/asp-net-core-course/identity-authorization-security/ContactManager/ContactsManager.Infrastructure/bin/Debug/net6.0/ContactsManager.Infrastructure.dll
+/home/murilonicemento/Projects/asp-net-core-course/identity-authorization-security/ContactManager/ContactsManager.Infrastructure/bin/Debug/net6.0/ContactsManager.Infrastructure.pdb
+/home/murilonicemento/Projects/asp-net-core-course/identity-authorization-security/ContactManager/ContactsManager.Infrastructure/bin/Debug/net6.0/ContactsManager.Core.dll
+/home/murilonicemento/Projects/asp-net-core-course/identity-authorization-security/ContactManager/ContactsManager.Infrastructure/bin/Debug/net6.0/ContactsManager.Core.pdb
+/home/murilonicemento/Projects/asp-net-core-course/identity-authorization-security/ContactManager/ContactsManager.Infrastructure/obj/Debug/net6.0/ContactsManager.Infrastructure.csproj.AssemblyReference.cache
+/home/murilonicemento/Projects/asp-net-core-course/identity-authorization-security/ContactManager/ContactsManager.Infrastructure/obj/Debug/net6.0/ContactsManager.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+/home/murilonicemento/Projects/asp-net-core-course/identity-authorization-security/ContactManager/ContactsManager.Infrastructure/obj/Debug/net6.0/ContactsManager.Infrastructure.AssemblyInfoInputs.cache
+/home/murilonicemento/Projects/asp-net-core-course/identity-authorization-security/ContactManager/ContactsManager.Infrastructure/obj/Debug/net6.0/ContactsManager.Infrastructure.AssemblyInfo.cs
+/home/murilonicemento/Projects/asp-net-core-course/identity-authorization-security/ContactManager/ContactsManager.Infrastructure/obj/Debug/net6.0/ContactsManager.Infrastructure.csproj.CoreCompileInputs.cache
+/home/murilonicemento/Projects/asp-net-core-course/identity-authorization-security/ContactManager/ContactsManager.Infrastructure/obj/Debug/net6.0/ContactsManager.Infrastructure.sourcelink.json
+/home/murilonicemento/Projects/asp-net-core-course/identity-authorization-security/ContactManager/ContactsManager.Infrastructure/obj/Debug/net6.0/Contacts.2BC572B3.Up2Date
+/home/murilonicemento/Projects/asp-net-core-course/identity-authorization-security/ContactManager/ContactsManager.Infrastructure/obj/Debug/net6.0/ContactsManager.Infrastructure.dll
+/home/murilonicemento/Projects/asp-net-core-course/identity-authorization-security/ContactManager/ContactsManager.Infrastructure/obj/Debug/net6.0/refint/ContactsManager.Infrastructure.dll
+/home/murilonicemento/Projects/asp-net-core-course/identity-authorization-security/ContactManager/ContactsManager.Infrastructure/obj/Debug/net6.0/ContactsManager.Infrastructure.pdb
+/home/murilonicemento/Projects/asp-net-core-course/identity-authorization-security/ContactManager/ContactsManager.Infrastructure/obj/Debug/net6.0/ref/ContactsManager.Infrastructure.dll

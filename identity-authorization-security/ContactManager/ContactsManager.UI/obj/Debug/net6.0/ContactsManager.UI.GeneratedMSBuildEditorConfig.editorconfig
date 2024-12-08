@@ -18,6 +18,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = /home/murilonicemento/Projects/asp-net-core-course/identity-authorization-security/ContactManager/ContactsManager.UI
 build_property._RazorSourceGeneratorDebug = 
 
+[/home/murilonicemento/Projects/asp-net-core-course/identity-authorization-security/ContactManager/ContactsManager.UI/Views/Account/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWNjb3VudC9SZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [/home/murilonicemento/Projects/asp-net-core-course/identity-authorization-security/ContactManager/ContactsManager.UI/Views/Countries/UploadFromExcel.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ291bnRyaWVzL1VwbG9hZEZyb21FeGNlbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

@@ -13,7 +13,6 @@
         "packagesPath": "/home/murilonicemento/.nuget/packages/",
         "outputPath": "/home/murilonicemento/Projects/asp-net-core-course/identity-authorization-security/ContactManager/ContactsManager.Core/obj/",
         "projectStyle": "PackageReference",
-        "UsingMicrosoftNETSdk": false,
         "configFilePaths": [
           "/home/murilonicemento/.nuget/NuGet/NuGet.Config"
         ],
@@ -116,7 +115,6 @@
         "packagesPath": "/home/murilonicemento/.nuget/packages/",
         "outputPath": "/home/murilonicemento/Projects/asp-net-core-course/identity-authorization-security/ContactManager/ContactsManager.Infrastructure/obj/",
         "projectStyle": "PackageReference",
-        "UsingMicrosoftNETSdk": false,
         "configFilePaths": [
           "/home/murilonicemento/.nuget/NuGet/NuGet.Config"
         ],
