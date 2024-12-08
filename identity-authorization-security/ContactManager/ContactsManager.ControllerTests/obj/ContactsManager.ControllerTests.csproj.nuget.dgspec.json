@@ -1,0 +1,412 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/murilonicemento/Projects/asp-net-core-course/identity-authorization-security/ContactManager/ContactsManager.ControllerTests/ContactsManager.ControllerTests.csproj": {}
+  },
+  "projects": {
+    "/home/murilonicemento/Projects/asp-net-core-course/identity-authorization-security/ContactManager/ContactsManager.ControllerTests/ContactsManager.ControllerTests.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/murilonicemento/Projects/asp-net-core-course/identity-authorization-security/ContactManager/ContactsManager.ControllerTests/ContactsManager.ControllerTests.csproj",
+        "projectName": "ContactsManager.ControllerTests",
+        "projectPath": "/home/murilonicemento/Projects/asp-net-core-course/identity-authorization-security/ContactManager/ContactsManager.ControllerTests/ContactsManager.ControllerTests.csproj",
+        "packagesPath": "/home/murilonicemento/.nuget/packages/",
+        "outputPath": "/home/murilonicemento/Projects/asp-net-core-course/identity-authorization-security/ContactManager/ContactsManager.ControllerTests/obj/",
+        "projectStyle": "PackageReference",
+        "UsingMicrosoftNETSdk": false,
+        "configFilePaths": [
+          "/home/murilonicemento/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "/home/murilonicemento/Projects/asp-net-core-course/identity-authorization-security/ContactManager/ContactsManager.UI/ContactsManager.UI.csproj": {
+                "projectPath": "/home/murilonicemento/Projects/asp-net-core-course/identity-authorization-security/ContactManager/ContactsManager.UI/ContactsManager.UI.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "AutoFixture": {
+              "target": "Package",
+              "version": "[4.17.0, )"
+            },
+            "FluentAssertions": {
+              "target": "Package",
+              "version": "[6.7.0, )"
+            },
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[17.1.0, )"
+            },
+            "Moq": {
+              "target": "Package",
+              "version": "[4.18.2, )"
+            },
+            "coverlet.collector": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.2, )"
+            },
+            "xunit": {
+              "target": "Package",
+              "version": "[2.4.1, )"
+            },
+            "xunit.runner.visualstudio": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.4.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.31, 6.0.31]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[6.0.31, 6.0.31]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/home/murilonicemento/.dotnet/sdk/8.0.302/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/murilonicemento/Projects/asp-net-core-course/identity-authorization-security/ContactManager/ContactsManager.Core/ContactsManager.Core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/murilonicemento/Projects/asp-net-core-course/identity-authorization-security/ContactManager/ContactsManager.Core/ContactsManager.Core.csproj",
+        "projectName": "ContactsManager.Core",
+        "projectPath": "/home/murilonicemento/Projects/asp-net-core-course/identity-authorization-security/ContactManager/ContactsManager.Core/ContactsManager.Core.csproj",
+        "packagesPath": "/home/murilonicemento/.nuget/packages/",
+        "outputPath": "/home/murilonicemento/Projects/asp-net-core-course/identity-authorization-security/ContactManager/ContactsManager.Core/obj/",
+        "projectStyle": "PackageReference",
+        "UsingMicrosoftNETSdk": false,
+        "configFilePaths": [
+          "/home/murilonicemento/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "CsvHelper": {
+              "target": "Package",
+              "version": "[28.0.1, )"
+            },
+            "EPPlus": {
+              "target": "Package",
+              "version": "[6.0.8, )"
+            },
+            "Microsoft.AspNetCore.Mvc.DataAnnotations": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Serilog": {
+              "target": "Package",
+              "version": "[2.12.0, )"
+            },
+            "Serilog.Extensions.Hosting": {
+              "target": "Package",
+              "version": "[5.0.1, )"
+            },
+            "SerilogTimings": {
+              "target": "Package",
+              "version": "[3.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.31, 6.0.31]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[6.0.31, 6.0.31]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/home/murilonicemento/.dotnet/sdk/8.0.302/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/murilonicemento/Projects/asp-net-core-course/identity-authorization-security/ContactManager/ContactsManager.Infrastructure/ContactsManager.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/murilonicemento/Projects/asp-net-core-course/identity-authorization-security/ContactManager/ContactsManager.Infrastructure/ContactsManager.Infrastructure.csproj",
+        "projectName": "ContactsManager.Infrastructure",
+        "projectPath": "/home/murilonicemento/Projects/asp-net-core-course/identity-authorization-security/ContactManager/ContactsManager.Infrastructure/ContactsManager.Infrastructure.csproj",
+        "packagesPath": "/home/murilonicemento/.nuget/packages/",
+        "outputPath": "/home/murilonicemento/Projects/asp-net-core-course/identity-authorization-security/ContactManager/ContactsManager.Infrastructure/obj/",
+        "projectStyle": "PackageReference",
+        "UsingMicrosoftNETSdk": false,
+        "configFilePaths": [
+          "/home/murilonicemento/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "/home/murilonicemento/Projects/asp-net-core-course/identity-authorization-security/ContactManager/ContactsManager.Core/ContactsManager.Core.csproj": {
+                "projectPath": "/home/murilonicemento/Projects/asp-net-core-course/identity-authorization-security/ContactManager/ContactsManager.Core/ContactsManager.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.9, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[6.0.9, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.31, 6.0.31]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[6.0.31, 6.0.31]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/home/murilonicemento/.dotnet/sdk/8.0.302/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/murilonicemento/Projects/asp-net-core-course/identity-authorization-security/ContactManager/ContactsManager.UI/ContactsManager.UI.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/murilonicemento/Projects/asp-net-core-course/identity-authorization-security/ContactManager/ContactsManager.UI/ContactsManager.UI.csproj",
+        "projectName": "ContactsManager.UI",
+        "projectPath": "/home/murilonicemento/Projects/asp-net-core-course/identity-authorization-security/ContactManager/ContactsManager.UI/ContactsManager.UI.csproj",
+        "packagesPath": "/home/murilonicemento/.nuget/packages/",
+        "outputPath": "/home/murilonicemento/Projects/asp-net-core-course/identity-authorization-security/ContactManager/ContactsManager.UI/obj/",
+        "projectStyle": "PackageReference",
+        "UsingMicrosoftNETSdk": false,
+        "configFilePaths": [
+          "/home/murilonicemento/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "/home/murilonicemento/Projects/asp-net-core-course/identity-authorization-security/ContactManager/ContactsManager.Core/ContactsManager.Core.csproj": {
+                "projectPath": "/home/murilonicemento/Projects/asp-net-core-course/identity-authorization-security/ContactManager/ContactsManager.Core/ContactsManager.Core.csproj"
+              },
+              "/home/murilonicemento/Projects/asp-net-core-course/identity-authorization-security/ContactManager/ContactsManager.Infrastructure/ContactsManager.Infrastructure.csproj": {
+                "projectPath": "/home/murilonicemento/Projects/asp-net-core-course/identity-authorization-security/ContactManager/ContactsManager.Infrastructure/ContactsManager.Infrastructure.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.9, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[6.0.9, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.9, )"
+            },
+            "Rotativa.AspNetCore": {
+              "target": "Package",
+              "version": "[1.2.0, )"
+            },
+            "Serilog": {
+              "target": "Package",
+              "version": "[2.12.0, )"
+            },
+            "Serilog.AspNetCore": {
+              "target": "Package",
+              "version": "[6.0.1, )"
+            },
+            "Serilog.Sinks.MSSqlServer": {
+              "target": "Package",
+              "version": "[5.8.0, )"
+            },
+            "Serilog.Sinks.Seq": {
+              "target": "Package",
+              "version": "[5.2.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.31, 6.0.31]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.linux-x64",
+              "version": "[6.0.31, 6.0.31]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[6.0.31, 6.0.31]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/home/murilonicemento/.dotnet/sdk/8.0.302/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

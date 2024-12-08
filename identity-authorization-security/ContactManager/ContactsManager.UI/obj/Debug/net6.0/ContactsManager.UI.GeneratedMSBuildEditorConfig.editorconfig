@@ -1,0 +1,63 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = ContactsManager.UI
+build_property.RootNamespace = ContactsManager.UI
+build_property.ProjectDir = /home/murilonicemento/Projects/asp-net-core-course/identity-authorization-security/ContactManager/ContactsManager.UI/
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = /home/murilonicemento/Projects/asp-net-core-course/identity-authorization-security/ContactManager/ContactsManager.UI
+build_property._RazorSourceGeneratorDebug = 
+
+[/home/murilonicemento/Projects/asp-net-core-course/identity-authorization-security/ContactManager/ContactsManager.UI/Views/Countries/UploadFromExcel.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ291bnRyaWVzL1VwbG9hZEZyb21FeGNlbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/murilonicemento/Projects/asp-net-core-course/identity-authorization-security/ContactManager/ContactsManager.UI/Views/Home/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9FcnJvci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/murilonicemento/Projects/asp-net-core-course/identity-authorization-security/ContactManager/ContactsManager.UI/Views/Persons/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGVyc29ucy9DcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/murilonicemento/Projects/asp-net-core-course/identity-authorization-security/ContactManager/ContactsManager.UI/Views/Persons/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGVyc29ucy9EZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/murilonicemento/Projects/asp-net-core-course/identity-authorization-security/ContactManager/ContactsManager.UI/Views/Persons/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGVyc29ucy9FZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/murilonicemento/Projects/asp-net-core-course/identity-authorization-security/ContactManager/ContactsManager.UI/Views/Persons/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGVyc29ucy9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/murilonicemento/Projects/asp-net-core-course/identity-authorization-security/ContactManager/ContactsManager.UI/Views/Persons/PersonsPDF.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGVyc29ucy9QZXJzb25zUERGLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/murilonicemento/Projects/asp-net-core-course/identity-authorization-security/ContactManager/ContactsManager.UI/Views/Shared/_GridColumnHeader.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19HcmlkQ29sdW1uSGVhZGVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/murilonicemento/Projects/asp-net-core-course/identity-authorization-security/ContactManager/ContactsManager.UI/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/murilonicemento/Projects/asp-net-core-course/identity-authorization-security/ContactManager/ContactsManager.UI/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/murilonicemento/Projects/asp-net-core-course/identity-authorization-security/ContactManager/ContactsManager.UI/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
