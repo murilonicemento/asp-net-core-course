@@ -9,10 +9,12 @@ namespace CRUDExample.Controllers;
 public class AccountController : Controller
 {
     private readonly UserManager<ApplicationUser> _userManager;
+    private readonly SignInManager<ApplicationUser> _signInManager;
 
-    public AccountController(UserManager<ApplicationUser> userManager)
+    public AccountController(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager)
     {
         _userManager = userManager;
+        _signInManager = signInManager;
     }
 
     [HttpGet]
@@ -39,9 +41,13 @@ public class AccountController : Controller
             PersonName = registerDto.Name
         };
 
-        IdentityResult result = await _userManager.CreateAsync(user);
+        IdentityResult result = await _userManager.CreateAsync(user, registerDto.Password);
 
-        if (result.Succeeded) return RedirectToAction(nameof(PersonsController.Index), "Persons");
+        if (result.Succeeded)
+        {
+            await _signInManager.SignInAsync(user, false);
+            return RedirectToAction(nameof(PersonsController.Index), "Persons");
+        }
 
         foreach (IdentityError error in result.Errors)
         {
