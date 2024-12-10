@@ -1,6 +1,6 @@
 ﻿<!DOCTYPE html>
 
-<html>
+<html lang="pt-br">
 <head>
  <meta name="viewport" content="width=device-width"/>
  <title>@ViewBag.Title</title>
@@ -34,12 +34,31 @@
        </li>
        @if (User.Identity?.IsAuthenticated is false)
        {
-        <li>
-         <a asp-controller="Account" asp-action="Register">Register</a>
-        </li>
-        <li>
-         <a asp-controller="Account" asp-action="Login">Login</a>
-        </li>
+        @if (ViewBag.CurrentUrl == "/Account/Register")
+        {
+         <li>
+          <a asp-controller="Account" asp-action="Register">Register</a>
+         </li>
+        }
+        else
+        {
+         <li>
+          <a asp-controller="Account" asp-action="Register" class="nav-active">Register</a>
+         </li>
+        }
+
+        @if (ViewBag.CurrentUrl == "/Account/Login")
+        {
+         <li>
+          <a asp-controller="Account" asp-action="Login">Login</a>
+         </li>
+        }
+        else
+        {
+         <li>
+          <a asp-controller="Account" asp-action="Login" class="nav-active">Login</a>
+         </li>
+        }
        }
        else
        {
@@ -59,10 +78,43 @@
   <div class="navbar mb">
 
    <ul>
-    <li>
-     <a asp-controller="Persons" asp-action="Index">Persons</a>
-     <a asp-controller="Countries" asp-action="UploadFromExcel">Upload Countries</a>
-    </li>
+    @if (ViewBag.CurrentUrl == "/Persons/Index")
+    {
+     <li>
+      <a asp-controller="Account" asp-action="Register">Register</a>
+     </li>
+    }
+    else
+    {
+     <li>
+      <a asp-controller="Account" asp-action="Register" class="nav-active">Register</a>
+     </li>
+    }
+
+    @if (ViewBag.CurrentUrl == "/Persons/Index")
+    {
+     <li>
+      <a asp-controller="Persons" asp-action="Index">Persons</a>
+     </li>
+    }
+    else
+    {
+     <li>
+      <a asp-controller="Persons" asp-action="Index" class="nav-active">Persons</a>
+     </li>
+    }
+    @if (ViewBag.CurrentUrl == "/Countries/UploadFromExcel")
+    {
+     <li>
+      <a asp-controller="Countries" asp-action="UploadFromExcel">Upload Countries</a>
+     </li>
+    }
+    else
+    {
+     <li>
+      <a asp-controller="Countries" asp-action="UploadFromExcel" class="nav-active">Upload Countries</a>
+     </li>
+    }
    </ul>
   </div>
 
@@ -72,6 +124,6 @@
  </div>
 </div>
 
-@RenderSection("scripts", required: false)
+@await RenderSectionAsync("scripts", required: false)
 </body>
 </html>
