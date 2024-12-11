@@ -1,6 +1,7 @@
 ﻿using ContactsManager.Core.Domain.IdentityEntities;
 using CRUDExample.Filters.ActionFilters;
 using Entities;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
@@ -42,6 +43,7 @@ namespace CRUDExample
             services.AddScoped<ICountriesUploaderService, CountriesUploaderService>();
 
             services.AddScoped<IPersonsGetterService, PersonsGetterServiceWithFewExcelFields>();
+
             services.AddScoped<PersonsGetterService, PersonsGetterService>();
 
             services.AddScoped<IPersonsAdderService, PersonsAdderService>();
@@ -49,12 +51,12 @@ namespace CRUDExample
             services.AddScoped<IPersonsUpdaterService, PersonsUpdaterService>();
             services.AddScoped<IPersonsSorterService, PersonsSorterService>();
 
+            services.AddTransient<PersonsListActionFilter>();
+
             services.AddDbContext<ApplicationDbContext>(options =>
             {
                 options.UseSqlServer(configuration.GetConnectionString("DefaultConnection"));
             });
-
-            services.AddTransient<PersonsListActionFilter>();
 
             services
                 .AddIdentity<ApplicationUser, ApplicationRole>(options =>
@@ -70,6 +72,13 @@ namespace CRUDExample
                 .AddDefaultTokenProviders()
                 .AddUserStore<UserStore<ApplicationUser, ApplicationRole, ApplicationDbContext, Guid>>()
                 .AddRoleStore<RoleStore<ApplicationRole, ApplicationDbContext, Guid>>();
+
+            services.AddAuthorization(options =>
+            {
+                options.FallbackPolicy = new AuthorizationPolicyBuilder().RequireAuthenticatedUser().Build();
+            });
+
+            services.ConfigureApplicationCookie(options => { options.LoginPath = "/Account/Login"; });
 
             services.AddHttpLogging(options =>
             {
