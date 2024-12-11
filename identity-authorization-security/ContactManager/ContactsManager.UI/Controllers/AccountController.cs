@@ -56,4 +56,39 @@ public class AccountController : Controller
 
         return View(registerDto);
     }
+
+    [HttpGet]
+    public IActionResult Login()
+    {
+        return View();
+    }
+
+    [HttpPost]
+    public async Task<IActionResult> Login(LoginDTO loginDto)
+    {
+        if (!ModelState.IsValid)
+        {
+            ViewBag.Errors = ModelState.Values.SelectMany(temp => temp.Errors).Select(temp => temp.ErrorMessage);
+
+            return View(loginDto);
+        }
+
+        var result = await _signInManager.PasswordSignInAsync(loginDto.Email, loginDto.Password, false, false);
+
+        if (result.Succeeded)
+        {
+            return RedirectToAction(nameof(PersonsController.Index), "Persons");
+        }
+
+        ModelState.AddModelError("Login", "Invalid email or password");
+
+        return View();
+    }
+
+    public async Task<IActionResult> Logout()
+    {
+        await _signInManager.SignOutAsync();
+
+        return RedirectToAction(nameof(PersonsController.Index), "Persons");
+    }
 }
