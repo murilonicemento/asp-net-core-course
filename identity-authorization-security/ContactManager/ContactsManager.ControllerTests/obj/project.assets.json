@@ -12959,7 +12959,6 @@
       "packagesPath": "/home/murilonicemento/.nuget/packages/",
       "outputPath": "/home/murilonicemento/Projects/asp-net-core-course/identity-authorization-security/ContactManager/ContactsManager.ControllerTests/obj/",
       "projectStyle": "PackageReference",
-      "UsingMicrosoftNETSdk": false,
       "configFilePaths": [
         "/home/murilonicemento/.nuget/NuGet/NuGet.Config"
       ],
