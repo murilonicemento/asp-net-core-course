@@ -98,4 +98,11 @@ public class AccountController : Controller
 
         return RedirectToAction(nameof(PersonsController.Index), "Persons");
     }
+
+    public async Task<IActionResult> IsEmailAlreadyRegistered(string email)
+    {
+        ApplicationUser user = await _userManager.FindByEmailAsync(email);
+
+        return user == null ? Json(true) : Json(false);
+    }
 }
