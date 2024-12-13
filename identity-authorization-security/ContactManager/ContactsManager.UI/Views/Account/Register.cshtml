@@ -65,6 +65,18 @@
         </div>
 
         <div class="form-field flex">
+            <div class="w-25">
+                <label asp-for="UserType" class="form-label pt">User Type</label>
+            </div>
+            <div class="flex-1">
+                <input type="radio" id="User" asp-for="UserType" value="User" checked>
+                <label for="User">User</label>
+                <input type="radio" id="Admin" asp-for="UserType" value="Admin">
+                <label for="Admin">Admin</label>
+            </div>
+        </div>
+
+        <div class="form-field flex">
             <div class="w-25"></div>
             <div class="flex-1">
                 <button class="button button-green-back" type="submit">Register</button>
@@ -87,7 +99,7 @@
 </div>
 
 @section scripts
- 
+
 {
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" asp-fallback-test="window.jQuery"
             asp-fallback-src="~/jquery.min.js"></script>

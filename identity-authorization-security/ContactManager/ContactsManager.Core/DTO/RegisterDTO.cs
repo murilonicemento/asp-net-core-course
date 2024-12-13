@@ -1,5 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 using Microsoft.AspNetCore.Mvc;
+using ServiceContracts.Enums;
 
 namespace ServiceContracts.DTO;
 
@@ -26,4 +27,6 @@ public class RegisterDTO
     [DataType(DataType.Password)]
     [Compare("Password", ErrorMessage = "Password and confirm password not match.")]
     public string ConfirmPassword { get; set; }
+
+    public UserTypeOptions UserType { get; set; } = UserTypeOptions.User;
 }

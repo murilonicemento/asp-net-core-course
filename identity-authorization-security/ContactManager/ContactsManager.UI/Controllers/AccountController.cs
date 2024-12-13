@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using ServiceContracts.DTO;
+using ServiceContracts.Enums;
 
 namespace CRUDExample.Controllers;
 
@@ -12,11 +13,14 @@ public class AccountController : Controller
 {
     private readonly UserManager<ApplicationUser> _userManager;
     private readonly SignInManager<ApplicationUser> _signInManager;
+    private readonly RoleManager<ApplicationRole> _roleManager;
 
-    public AccountController(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager)
+    public AccountController(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager,
+        RoleManager<ApplicationRole> roleManager)
     {
         _userManager = userManager;
         _signInManager = signInManager;
+        _roleManager = roleManager;
     }
 
     [HttpGet]
@@ -47,6 +51,21 @@ public class AccountController : Controller
 
         if (result.Succeeded)
         {
+            if (registerDto.UserType == UserTypeOptions.Admin)
+            {
+                if (await _roleManager.FindByNameAsync(UserTypeOptions.Admin.ToString()) is null)
+                {
+                    ApplicationRole applicationRole = new() { Name = UserTypeOptions.Admin.ToString() };
+                    await _roleManager.CreateAsync(applicationRole);
+                }
+
+                await _userManager.AddToRoleAsync(user, UserTypeOptions.Admin.ToString());
+            }
+            else
+            {
+                await _userManager.AddToRoleAsync(user, UserTypeOptions.User.ToString());
+            }
+
             await _signInManager.SignInAsync(user, false);
             return RedirectToAction(nameof(PersonsController.Index), "Persons");
         }
