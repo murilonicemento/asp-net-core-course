@@ -98,6 +98,16 @@ public class AccountController : Controller
 
         if (result.Succeeded)
         {
+            ApplicationUser? user = await _userManager.FindByEmailAsync(loginDto.Email);
+
+            if (user is not null)
+            {
+                if (await _userManager.IsInRoleAsync(user, UserTypeOptions.Admin.ToString()))
+                {
+                    return RedirectToAction("Index", "Home", new { area = "Admin" });
+                }
+            }
+
             if (!string.IsNullOrEmpty(ReturnUrl) && Url.IsLocalUrl(ReturnUrl))
             {
                 return LocalRedirect(ReturnUrl);

@@ -1,0 +1,13 @@
+/home/murilonicemento/Projects/asp-net-core-course/identity-authorization-security/ContactManager/ContactsManager.Core/bin/Debug/net8.0/ContactsManager.Core.deps.json
+/home/murilonicemento/Projects/asp-net-core-course/identity-authorization-security/ContactManager/ContactsManager.Core/bin/Debug/net8.0/ContactsManager.Core.dll
+/home/murilonicemento/Projects/asp-net-core-course/identity-authorization-security/ContactManager/ContactsManager.Core/bin/Debug/net8.0/ContactsManager.Core.pdb
+/home/murilonicemento/Projects/asp-net-core-course/identity-authorization-security/ContactManager/ContactsManager.Core/obj/Debug/net8.0/ContactsManager.Core.csproj.AssemblyReference.cache
+/home/murilonicemento/Projects/asp-net-core-course/identity-authorization-security/ContactManager/ContactsManager.Core/obj/Debug/net8.0/ContactsManager.Core.GeneratedMSBuildEditorConfig.editorconfig
+/home/murilonicemento/Projects/asp-net-core-course/identity-authorization-security/ContactManager/ContactsManager.Core/obj/Debug/net8.0/ContactsManager.Core.AssemblyInfoInputs.cache
+/home/murilonicemento/Projects/asp-net-core-course/identity-authorization-security/ContactManager/ContactsManager.Core/obj/Debug/net8.0/ContactsManager.Core.AssemblyInfo.cs
+/home/murilonicemento/Projects/asp-net-core-course/identity-authorization-security/ContactManager/ContactsManager.Core/obj/Debug/net8.0/ContactsManager.Core.csproj.CoreCompileInputs.cache
+/home/murilonicemento/Projects/asp-net-core-course/identity-authorization-security/ContactManager/ContactsManager.Core/obj/Debug/net8.0/ContactsManager.Core.sourcelink.json
+/home/murilonicemento/Projects/asp-net-core-course/identity-authorization-security/ContactManager/ContactsManager.Core/obj/Debug/net8.0/ContactsManager.Core.dll
+/home/murilonicemento/Projects/asp-net-core-course/identity-authorization-security/ContactManager/ContactsManager.Core/obj/Debug/net8.0/refint/ContactsManager.Core.dll
+/home/murilonicemento/Projects/asp-net-core-course/identity-authorization-security/ContactManager/ContactsManager.Core/obj/Debug/net8.0/ContactsManager.Core.pdb
+/home/murilonicemento/Projects/asp-net-core-course/identity-authorization-security/ContactManager/ContactsManager.Core/obj/Debug/net8.0/ref/ContactsManager.Core.dll

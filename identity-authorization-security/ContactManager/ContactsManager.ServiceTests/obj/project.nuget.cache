@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "fcsW6YGrjoU=",
+  "dgSpecHash": "QXaNUzQJSZI=",
   "success": true,
   "projectFilePath": "/home/murilonicemento/Projects/asp-net-core-course/identity-authorization-security/ContactManager/ContactsManager.ServiceTests/ContactsManager.ServiceTests.csproj",
   "expectedPackageFiles": [
@@ -186,9 +186,7 @@
     "/home/murilonicemento/.nuget/packages/xunit.core/2.4.1/xunit.core.2.4.1.nupkg.sha512",
     "/home/murilonicemento/.nuget/packages/xunit.extensibility.core/2.4.1/xunit.extensibility.core.2.4.1.nupkg.sha512",
     "/home/murilonicemento/.nuget/packages/xunit.extensibility.execution/2.4.1/xunit.extensibility.execution.2.4.1.nupkg.sha512",
-    "/home/murilonicemento/.nuget/packages/xunit.runner.visualstudio/2.4.3/xunit.runner.visualstudio.2.4.3.nupkg.sha512",
-    "/home/murilonicemento/.nuget/packages/microsoft.netcore.app.ref/6.0.31/microsoft.netcore.app.ref.6.0.31.nupkg.sha512",
-    "/home/murilonicemento/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.31/microsoft.aspnetcore.app.ref.6.0.31.nupkg.sha512"
+    "/home/murilonicemento/.nuget/packages/xunit.runner.visualstudio/2.4.3/xunit.runner.visualstudio.2.4.3.nupkg.sha512"
   ],
   "logs": []
 }

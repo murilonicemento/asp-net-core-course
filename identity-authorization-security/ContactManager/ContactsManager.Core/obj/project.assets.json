@@ -1,7 +1,7 @@
 {
   "version": 3,
   "targets": {
-    "net6.0": {
+    "net8.0": {
       "CsvHelper/28.0.1": {
         "type": "package",
         "compile": {
@@ -7997,7 +7997,7 @@
     }
   },
   "projectFileDependencyGroups": {
-    "net6.0": [
+    "net8.0": [
       "CsvHelper >= 28.0.1",
       "EPPlus >= 6.0.8",
       "Microsoft.AspNetCore.Identity >= 2.2.0",
@@ -8025,14 +8025,14 @@
         "/home/murilonicemento/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
-        "net6.0"
+        "net8.0"
       ],
       "sources": {
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "net6.0": {
-          "targetAlias": "net6.0",
+        "net8.0": {
+          "targetAlias": "net8.0",
           "projectReferences": {}
         }
       },
@@ -8048,8 +8048,8 @@
       }
     },
     "frameworks": {
-      "net6.0": {
-        "targetAlias": "net6.0",
+      "net8.0": {
+        "targetAlias": "net8.0",
         "dependencies": {
           "CsvHelper": {
             "target": "Package",
@@ -8099,22 +8099,12 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[6.0.31, 6.0.31]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Ref",
-            "version": "[6.0.31, 6.0.31]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/home/murilonicemento/.dotnet/sdk/8.0.302/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/home/murilonicemento/.dotnet/sdk/8.0.302/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
