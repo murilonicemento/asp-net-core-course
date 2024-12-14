@@ -4,6 +4,7 @@ using Entities;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Repositories;
 using RepositoryContracts;
@@ -32,6 +33,8 @@ namespace CRUDExample
                     Value = "My-Value-From-Global",
                     Order = 2
                 });
+
+                options.Filters.Add(new AutoValidateAntiforgeryTokenAttribute());
             });
 
             //add services into IoC container
