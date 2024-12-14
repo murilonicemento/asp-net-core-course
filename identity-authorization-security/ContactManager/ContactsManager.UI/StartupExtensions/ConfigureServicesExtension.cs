@@ -76,6 +76,8 @@ namespace CRUDExample
             services.AddAuthorization(options =>
             {
                 options.FallbackPolicy = new AuthorizationPolicyBuilder().RequireAuthenticatedUser().Build();
+                options.AddPolicy("NotAuthorized",
+                    policy => { policy.RequireAssertion(context => (bool)context.User.Identity?.IsAuthenticated); });
             });
 
             services.ConfigureApplicationCookie(options => { options.LoginPath = "/Account/Login"; });

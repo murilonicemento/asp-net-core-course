@@ -24,12 +24,14 @@ public class AccountController : Controller
     }
 
     [HttpGet]
+    [Authorize("NotAuthorized")]
     public IActionResult Register()
     {
         return View();
     }
 
     [HttpPost]
+    [Authorize("NotAuthorized")]
     public async Task<IActionResult> Register(RegisterDTO registerDto)
     {
         if (!ModelState.IsValid)
@@ -79,12 +81,14 @@ public class AccountController : Controller
     }
 
     [HttpGet]
+    [Authorize("NotAuthorized")]
     public IActionResult Login()
     {
         return View();
     }
 
     [HttpPost]
+    [Authorize("NotAuthorized")]
     public async Task<IActionResult> Login(LoginDTO loginDto, string? ReturnUrl)
     {
         if (!ModelState.IsValid)
@@ -121,6 +125,7 @@ public class AccountController : Controller
         return View();
     }
 
+    [Authorize]
     public async Task<IActionResult> Logout()
     {
         await _signInManager.SignOutAsync();
@@ -130,7 +135,7 @@ public class AccountController : Controller
 
     public async Task<IActionResult> IsEmailAlreadyRegistered(string email)
     {
-        ApplicationUser user = await _userManager.FindByEmailAsync(email);
+        ApplicationUser? user = await _userManager.FindByEmailAsync(email);
 
         return user == null ? Json(true) : Json(false);
     }
