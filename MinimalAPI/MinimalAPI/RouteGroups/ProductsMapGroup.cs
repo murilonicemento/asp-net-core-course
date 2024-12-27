@@ -18,63 +18,46 @@ public static class ProductsMapGroup
         groupBuilder.MapGet("/",
             async context => { await context.Response.WriteAsync(JsonSerializer.Serialize(products)); });
 
-        groupBuilder.MapGet("/{id:int}",
-            async (HttpContext context, int id) =>
-            {
-                var product = products.FirstOrDefault(product => product.Id == id);
+        groupBuilder.MapGet("/{id:int}", (HttpContext context, int id) =>
+        {
+            var product = products.FirstOrDefault(product => product.Id == id);
 
-                if (product is null)
-                {
-                    context.Response.StatusCode = 404;
-                    await context.Response.WriteAsync("Product no found.");
+            return product is null ? Results.NotFound(new { message = "Product no found." }) : Results.Ok(product);
+        });
 
-                    return;
-                }
-
-                await context
-                    .Response
-                    .WriteAsync(JsonSerializer.Serialize(product));
-            });
-
-        groupBuilder.MapPost("/", async (HttpContext context, Product product) =>
+        groupBuilder.MapPost("/", (HttpContext context, Product product) =>
         {
             products.Add(product);
 
-            await context.Response.WriteAsync("Product added.");
+            return Results.Ok(new { message = "Product added." });
         });
 
-        groupBuilder.MapPut("/{id:int}", async (HttpContext context, [FromBody] Product product, [FromQuery] int id) =>
+        groupBuilder.MapPut("/{id:int}", (HttpContext context, [FromBody] Product product, [FromQuery] int id) =>
         {
             var content = products.FirstOrDefault(temp => temp.Id == id);
 
-            if (content is null)
-            {
-                context.Response.StatusCode = 404;
-                await context.Response.WriteAsync("Product no found.");
-
-                return;
-            }
+            if (content is null) return Results.NotFound(new { message = "Product no found." });
 
             content.Name = product.Name;
 
-            await context.Response.WriteAsync("Product Updated.");
+            return Results.Ok(new { message = "Product Updated." });
         });
 
-        groupBuilder.MapDelete("/{id:int}", async (HttpContext context, int id) =>
+        groupBuilder.MapDelete("/{id:int}", (HttpContext context, int id) =>
         {
             var product = products.FirstOrDefault(product => product.Id == id);
 
             if (product is null)
             {
-                context.Response.StatusCode = 404;
-                await context.Response.WriteAsync("Product no found.");
+                // return Results.NotFound(new { message = "Product no found." });
 
-                return;
+                return Results.ValidationProblem(new Dictionary<string, string[]>
+                    { { "id", ["Incorrect product id"] } });
             }
 
             products.Remove(product);
 
-            await context.Response.WriteAsync("Product deleted.");
+            return Results.Ok(new { message = "Product deleted." });
         });
 
         return groupBuilder;
