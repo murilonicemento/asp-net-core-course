@@ -1,6 +1,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.Text.Json;
 using Microsoft.AspNetCore.Mvc;
+using MinimalAPI.EndpointFilters;
 using MinimalAPI.Models;
 
 namespace MinimalAPI.RouteGroups;
@@ -31,24 +32,7 @@ public static class ProductsMapGroup
             products.Add(product);
 
             return Results.Ok(new { message = "Product added." });
-        }).AddEndpointFilter(async (context, next) =>
-        {
-            var product = context.Arguments.OfType<Product>().FirstOrDefault();
-
-            if (product is null) return Results.BadRequest("Product details not found in the request");
-
-            var validationContext = new ValidationContext(product);
-            var errors = new List<ValidationResult>();
-            var isValid = Validator.TryValidateObject(product, validationContext, errors, true);
-
-            if (!isValid) return Results.BadRequest(errors.FirstOrDefault()?.ErrorMessage);
-
-            var result = await next(context);
-
-            // After logic
-
-            return result;
-        });
+        }).AddEndpointFilter<CustomEndpointFilter>();
 
         groupBuilder.MapPut("/{id:int}", (HttpContext context, [FromBody] Product product, [FromQuery] int id) =>
         {
